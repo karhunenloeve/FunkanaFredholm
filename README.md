@@ -28,10 +28,6 @@ In diesem Repository findest du:
 
 ---
 
-## ✍️ Autoren
-
-Dieses Projekt wurde von denjenigen erstellt, die eine tiefe Liebe zur Funktionalanalysis und Fredholm-Operatoren teilen.
-
 - **karhunenloeve** - [GitHub-Profil](https://github.com/karhunenloeve)
 
 ## 📄 Lizenz
