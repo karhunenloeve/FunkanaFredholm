@@ -33,7 +33,7 @@
 \newcommand{\ind}{\operatorname{ind}}
 \newcommand{\im}{\operatorname{im}}
 \newcommand{\coker}{\operatorname{coker}}
-\newcommand{\on}{{n \in \mathbb{N}}}
+\newcommand{\on}{{n \geq 1}}
 
 \newtheorem{conj}{Vermutung}
 \numberwithin{conj}{section}
@@ -98,7 +98,7 @@ Als Banachraum ist $\B(\h)$ vollständig und es gilt für die Operatornorm $\Ver
 \begin{proof}
     Sei $\h$ ein endlichdimensionaler Hilbertraum. Damit ist $\h \cong \mathbb{C}^{\vert B_\h \vert}$ für eine insbesondere endliche Basis $B_\h$. Dann gilt für alle $T \in \mathbb{B}_\h$, dass $\Vert T \Vert_\h \leq 1$ nach Definition des Einheitsballs. Da $\mathbb{B}_\h$ abgeschlossen und beschränkt ist, ist diese Menge auch kompakt, nach Heine-Borel.
 
-    Sei $\h$ unendlichdimensional. Dann hat $\h$ eine Basis $B_h$ mit unendlich vielen Elementen. Wir betrachten ein abzählbares Orthonormalsystem $B^\sharp_\h = \{b_n\}_\on$, welches im separablen Fall als Basis gewählt werden kann und im nicht separablen Fall als Teilmenge $B^\sharp_\h \subset B_\h$. Dann ist $\Vert b_n \Vert_\h = 1$ und $b_n \in \mathbb{B}_\h$ für alle $n \in \mathbb{N}$. Aufgrund der Orthonormalität gilt $\Vert b_n - b_m \Vert_\h = \sqrt{2}$ für alle $n \neq m$ und $b_n,b_m \in B^\sharp_\h$. Also ist keine Teilfolge von $(b_n)_\on$ Cauchy. Somit ist $(b_n)_\on$ eine Folge ohne konvergente Teilfolge, aber in $\mathbb{B}_\h$ enthalten. Damit ist $\mathbb{B}_\h$ nicht kompakt.
+    Sei $\h$ unendlichdimensional. Dann hat $\h$ eine Basis $B_h$ mit unendlich vielen Elementen. Wir betrachten ein abzählbares Orthonormalsystem $B^\sharp_\h = \{b_n\}_\on$, welches im separablen Fall als Basis gewählt werden kann und im nicht separablen Fall als Teilmenge $B^\sharp_\h \subset B_\h$. Dann ist $\Vert b_n \Vert_\h = 1$ und $b_n \in \mathbb{B}_\h$ für alle $n \geq 1$. Aufgrund der Orthonormalität gilt $\Vert b_n - b_m \Vert_\h = \sqrt{2}$ für alle $n \neq m$ und $b_n,b_m \in B^\sharp_\h$. Also ist keine Teilfolge von $(b_n)_\on$ Cauchy. Somit ist $(b_n)_\on$ eine Folge ohne konvergente Teilfolge, aber in $\mathbb{B}_\h$ enthalten. Damit ist $\mathbb{B}_\h$ nicht kompakt.
 \end{proof}
 
 Wir erinnern an die Klasse der kompakten Operatoren. Sie werden definiert als beschränkte lineare Operatoren, welche $\mathbb{B}_\h$ auf eine präkompakte Menge abbilden. Eine Menge heißt präkompakt, wenn ihr Abschluss kompakt ist.
@@ -137,13 +137,13 @@ Sei \( K \in \mathcal{K}(\h, \h') \) ein kompakter Operator und \( \h \) und \( 
 
 Sei \( (\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \h'' \). Da \( B \in \mathcal{B}(\h'', \h') \) beschränkt ist, ist \( (B\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \h' \). Da \( K \) kompakt ist, besitzt \( (KB\varphi_n)_{n \geq 1} \) eine konvergente Teilfolge in \( \h' \). Somit ist \( KB \) kompakt.
 
-Betrachte eine beschränkte Folge $(\varphi_n)_{n \in \mathbb{N}} \subset \h'$, mit $\Vert \varphi_n - \varphi_m \Vert_{\h'} \leq M$ für alle $n,m \in \mathbb{N}$. Da $K^\ast$ beschränkt ist hat $(KK^\ast\varphi_n)_{n \in \mathbb{N}} \subset \h'$ eine konvergente Teilfolge $(KK^\ast\varphi_{n_k})_{n \in \mathbb{N}}$. Es gilt nun mittels Skalarprodukt
+Betrachte eine beschränkte Folge $(\varphi_n)_{n \geq 1} \subset \h'$, mit $\Vert \varphi_n - \varphi_m \Vert_{\h'} \leq M$ für alle $n,m \in \mathbb{N}$. Da $K^\ast$ beschränkt ist hat $(KK^\ast\varphi_n)_{n \geq 1} \subset \h'$ eine konvergente Teilfolge $(KK^\ast\varphi_{n_k})_{n \geq 1}$. Es gilt nun mittels Skalarprodukt
 \begin{align}
     \Vert K^\ast \varphi_{n_k} - K^\ast\varphi_{n_l} \Vert^2_\h &= \langle KK^\ast (\varphi_{n_k} - \varphi_{n_l}), \varphi_{n_k} - \varphi_{n_l} \rangle \\
     &\leq \Vert KK^\ast (\varphi_{n_k} - \varphi_{n_l}) \Vert_{\h'} \cdot \Vert \varphi_{n_k} - \varphi_{n_l} \Vert_{\h'} \\
     &\leq M \Vert KK^\ast (\varphi_{n_k} - \varphi_{n_l}) \Vert_{\h'} \to 0.
 \end{align}
-Also ist $(K^\ast \varphi_{n_k})_{k \in \mathbb{N}}$ eine Cauchy-Folge in einem Hilbertraum und aufgrund von dessen Vollständigkeit auch konvergent. Also hat $(K^\ast \varphi_{n})_{n \in \mathbb{N}}$ eine konvergente Teilfolge für jede beschränkte Folge $(\varphi_n)_{n \in \mathbb{N}} \subset \h'$, weshalb $K^\ast$ kompakt ist.
+Also ist $(K^\ast \varphi_{n_k})_{k \in \mathbb{N}}$ eine Cauchy-Folge in einem Hilbertraum und aufgrund von dessen Vollständigkeit auch konvergent. Also hat $(K^\ast \varphi_{n})_{n \geq 1}$ eine konvergente Teilfolge für jede beschränkte Folge $(\varphi_n)_{n \geq 1} \subset \h'$, weshalb $K^\ast$ kompakt ist.
 \end{proof}
 
 \begin{theorem}
@@ -181,7 +181,7 @@ Hier ist $\pi$ die Projektion auf den Quotienten $\mathcal{Q}(\mathcal{H})$, und
 \begin{theorem}[Satz von Riesz-Schauder]
 Für $K \in \mathcal{K}(\h)$ definieren wir $T = \mathbf{1}-K$. Dann gelten die folgenden Aussagen:
 \begin{enumerate}
-    \item Es gibt ein $n \in \mathbb{N}$, so dass $\ker(T^k) = \ker(T^n)$ für alle $k \geq n$.
+    \item Es gibt ein $n \geq 1$, so dass $\ker(T^k) = \ker(T^n)$ für alle $k \geq n$.
     \item $\im(T) = T(\h)$ ist ein abgeschlossener Unterraum.
     \item $\dim(\ker(T)) = \dim(\ker(T^\ast)) < \infty$.
 \end{enumerate}
@@ -329,7 +329,7 @@ Sei $T^\dagger$ das Pseudoinverse von $T$. Dann ist $TT^\dagger - \mathbf{1} \in
 \begin{remark}
 Für die Definition eines Fredholmoperators reicht es nicht zu fordern, dass die Dimension des Kerns und Kokerns endlich sein soll. Wir können die Bedingung nicht fallen lassen, dass der Operator ein abgeschlossenes Bild haben soll, wie Satz \ref{fredholm}.2 fälschlicherweise suggeriert. Betrachten wir dazu den selbstadjungierten Operator $T: \ell^2(\mathbb{N}) \to \ell^2(\mathbb{N}), T(x_n) \coloneq \sum_{n \geq 1} \frac{1}{n} \langle x_n,e_n \rangle e_n$. wobei $e_n \coloneq (0, \ldots, 1, \ldots)$ mit einer $1$ für das $n$-te Folgeglied. Da $T$ selbstadjungiert ist, gilt $\ker(T) = \ker(T^\ast) = \{0\}$ und $\dim(ker(T)) = \dim(\ker(T^\ast)) < \infty$. 
 
-Wir zeigen, dass $T$ kompakt ist. Betrachte $$\mathbb{B}_{\ell^2(\mathbb{N})} := \left\{ (x_n) \in \ell^2(\mathbb{N}) \; \bigg\vert \; \Vert (x_n) \Vert_2 \coloneq \left(\sum_{n=1}^{\infty} \vert x_n \vert^2\right)^{\frac{1}{2}} \leq 1 \right\},$$ die Einheitskugel in $\ell^2(\mathbb{N})$. Dann ist für $(x_n)_{n \geq 1} \in \mathbb{B}_{\ell^2(\mathbb{N})}$ die Norm der Folge $\Vert T(x_n) \Vert_2 = (\sum_{n=1}^\infty \frac{1}{n^2} \vert x_n \vert^2)^\frac{1}{2} \leq (\sum_{n=1}^\infty \vert x_n \vert^2)^\frac{1}{2} \leq 1 < \infty$ beschränkt. Also ist das Bild präkompakt und $T$ somit kompakt. Die Folge $(y_n)_{n \geq 1} = T(e_n)_{n \geq 1} = (\frac{1}{n}e_n)_{n \geq 1} \in \im(T)$ hat Norm $\Vert (y_n)_{n \geq 1} \Vert_2 = \frac{1}{n} \xrightarrow[]{n \to \infty} 0$, aber $(0)_{n \geq 1} \notin \im(T)$. Also kann $T$ nicht abgeschlossen sein, da wir eine Bildfolge gefunden haben, die gegen den Nullvektor in $\ell^2$-Norm konvergiert.
+Wir zeigen, dass $T$ kompakt ist. Betrachte $$\mathbb{B}_{\ell^2(\mathbb{N})} := \left\{ (x_n) \in \ell^2(\mathbb{N}) \; \bigg\vert \; \Vert (x_n) \Vert_2 \coloneq \left(\sum_{n=1}^{\infty} \vert x_n \vert^2\right)^{\frac{1}{2}} \leq 1 \right\},$$ die Einheitskugel in $\ell^2(\mathbb{N})$. Dann ist für $(x_n)_{n \geq 1} \in \mathbb{B}_{\ell^2(\mathbb{N})}$ die Norm der Folge $\Vert T(x_n) \Vert_2 = (\sum_{n=1}^\infty \frac{1}{n^2} \vert x_n \vert^2)^\frac{1}{2} \leq (\sum_{n=1}^\infty \vert x_n \vert^2)^\frac{1}{2} \leq 1 < \infty$ beschränkt. Also ist das Bild präkompakt und $T$ somit kompakt. Die Folge $(y_n)_{n \geq 1} = T(\delta_{mn})_{n \geq 1} = (\frac{1}{n}\delta_{mn})_{n \geq 1} \in \im(T)$ hat Norm $\Vert (y_n)_{n \geq 1} \Vert_2 = \frac{1}{m} \xrightarrow[]{m \to \infty} 0$, aber $(0)_{n \geq 1} \notin \im(T)$. Also kann $T$ nicht abgeschlossen sein, da wir eine Bildfolge gefunden haben, die gegen den Nullvektor in $\ell^2$-Norm konvergiert.
 \end{remark}
 
 Wir führen nun ein erstes Kriterium ein, mit dem wir entscheiden können, ob ein gegebener Operator Fredholmsch ist oder nicht. Es gibt insgesamt zwei weit verbreitete Kriterien um dies zu prüfen, das zweite Kriterium ist in \cite[Theorem 3.4.1]{doll2023spectral} nachzulesen.
@@ -343,7 +343,7 @@ Wir führen nun ein erstes Kriterium ein, mit dem wir entscheiden können, ob ei
 \end{proposition}
 
 \begin{proof}
-    Sei $(\phi_n)_{n \in \mathbb{N}}$ eine beschränkte Folge in $\h$, sodass $T \phi_n$ konvergent ist in $\h'$, es soll also ein $\psi \in \h'$ geben, mit $\lim_{n\to\infty} T\phi_n = \psi$. Weil $K$ kompakt ist, gibt es eine Teilfolge $(\phi_{n_k})_{k \in \mathbb{N}}$, so dass $K \phi_{n_k}$ konvergent ist. Dann ist $(K\phi_{n_k})_{k \in \mathbb{n}}$ eine Cauchy-Folge und $\lim_{k\to\infty} T\phi_{n_k} = \psi$, also ist auch $(T\phi_{n_k})_{k\in\mathbb{N}}$ eine Cauchy-Folge. Deshalb gibt es für alle $\epsilon > 0$ ein $N\in \mathbb{N}$, so dass
+    Sei $(\phi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$, sodass $T \phi_n$ konvergent ist in $\h'$, es soll also ein $\psi \in \h'$ geben, mit $\lim_{n\to\infty} T\phi_n = \psi$. Weil $K$ kompakt ist, gibt es eine Teilfolge $(\phi_{n_k})_{k \in \mathbb{N}}$, so dass $K \phi_{n_k}$ konvergent ist. Dann ist $(K\phi_{n_k})_{k \in \mathbb{n}}$ eine Cauchy-Folge und $\lim_{k\to\infty} T\phi_{n_k} = \psi$, also ist auch $(T\phi_{n_k})_{k\in\mathbb{N}}$ eine Cauchy-Folge. Deshalb gibt es für alle $\epsilon > 0$ ein $N\in \mathbb{N}$, so dass
     \begin{align}
         \max(\Vert T\phi_{n_k}-T\phi_{n_m} \Vert_{\h'}, \Vert K\phi_{n_k}-K\phi_{n_m} \Vert_{\h'}) < \frac{\epsilon}{2c}
     \end{align}
@@ -353,9 +353,9 @@ Wir führen nun ein erstes Kriterium ein, mit dem wir entscheiden können, ob ei
     \end{align}
     für alle $k,m > N$. Also ist $(\phi_{n_k})_{k \in \mathbb{N}}$ eine Cauchy-Folge in einem Hilbertraum und somit konvergent.
 
-    Wir nehmen an, dass $\dim(\ker(T))$ unendlichdimensional ist und $\{\phi_n \;\vert\; n \in \mathbb{N}\}$ eine Orthonormalbasis des Kerns von $T$ ist. Dann ist $(\phi_n)_{n \in \mathbb{N}}$ eine beschränkte Folge in $\h$, so dass $T \phi_n$ konstant $0$ ist und damit ebenfalls konvergent. Dies ist ein Widerspruch, da $(\phi_n)_{n\in \mathbb{N}}$ keine konvergente Teilfolge besitzt. Also ist $\dim(\ker(T)) < \infty$.
+    Wir nehmen an, dass $\dim(\ker(T))$ unendlichdimensional ist und $\{\phi_n \;\vert\; n \geq 1\}$ eine Orthonormalbasis des Kerns von $T$ ist. Dann ist $(\phi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$, so dass $T \phi_n$ konstant $0$ ist und damit ebenfalls konvergent. Dies ist ein Widerspruch, da $(\phi_n)_{n\in \mathbb{N}}$ keine konvergente Teilfolge besitzt. Also ist $\dim(\ker(T)) < \infty$.
 
-    Ferner gibt es eine Konstante $c_1 > 0$, so dass $\Vert \psi \Vert \leq c_1 \Vert T\psi \Vert$ für alle $\psi \in \ker(T)^\perp$, denn sonst gäbe es eine Folge $(psi_n)_{n\in\mathbb{N}}$ in $\ker(T)^\perp$ mit $\Vert \psi_n \Vert = 1$ für alle $n \in \mathbb{N}$ und $\Vert T\psi_n \Vert \leq \frac{1}{n}$ für alle $n \in \mathbb{N}$. Da $(T\psi_n)_\on$ konvergent ist, gibt es nach obigem Argument nach Übergang zu einer Teilfolge einen Grenzwert zu ebd. Teilfolge $\psi \in \ker(T)^\perp$ mit $\Vert \psi \Vert = 1$. Dies ist ein Widerspruch, da $T \psi = \lim_{k\to\infty} T \psi_{n_k} = 0$.
+    Ferner gibt es eine Konstante $c_1 > 0$, so dass $\Vert \psi \Vert \leq c_1 \Vert T\psi \Vert$ für alle $\psi \in \ker(T)^\perp$, denn sonst gäbe es eine Folge $(psi_n)_{n\in\mathbb{N}}$ in $\ker(T)^\perp$ mit $\Vert \psi_n \Vert = 1$ für alle $n \geq 1$ und $\Vert T\psi_n \Vert \leq \frac{1}{n}$ für alle $n \geq 1$. Da $(T\psi_n)_\on$ konvergent ist, gibt es nach obigem Argument nach Übergang zu einer Teilfolge einen Grenzwert zu ebd. Teilfolge $\psi \in \ker(T)^\perp$ mit $\Vert \psi \Vert = 1$. Dies ist ein Widerspruch, da $T \psi = \lim_{k\to\infty} T \psi_{n_k} = 0$.
 
     Zuletzt sei $(\theta_n)_{n \geq 1}$ eine Folge in $\im(T)$, die zu einem $\theta \in \h'$ konvergiert. Dann gibt es ein $\phi_n \in \ker(T)^\perp$ mit $T\phi_n = \theta_n$. Nach dem vorherigen Argument erhalten wir $\Vert\phi_n-\phi_m\Vert \leq c_1 \Vert \theta_n - \theta_m \Vert$, und somit ist $(\phi_n)_{n\geq 1}$ eine Cauchy-Folge und kovergiert zu einem $\phi$. Folglich ist $T\phi = \theta$ und $\theta \in \im(T)$. Also ist $\im(T)$ abgeschlossen.
 \end{proof}
@@ -386,7 +386,7 @@ Als Konsequenz dieser Definition und dem Satz \ref{fredholm} ergibt sich folgend
         \item Für $T \in \mathcal{FB}(\h,\h')$, $T' \in \mathcal{FB}(\h'',\h)$, ist auch $TT'\in \mathcal{FB}(\h'',\h')$.
         \item Falls $T \in \mathcal{FB}(\h,\h')$, dann ist $T^\ast \in \mathcal{FB}(\h',\h)$ und $\ind(T^\ast) = - \ind(T)$.
         \item Falls $A \in \mathcal{B}(\h,\h')$ invertierbar ist, dann ist $A \in \mathcal{FB}(\h,\h')$ und $\ind(A) = 0$.
-        \item Für $T \in \mathcal{FB}(\h,\h')$ und invertierbare Operatoren $A \in \mathcal{B}(\h',\h'')$ und $B \in \mathcal{B}(h'',h)$, erhalten wir für die Indizes $\ind(AT) = \ind(TB) = \ind(T)$.
+        \item Für $T \in \mathcal{FB}(\h,\h')$ und invertierbare Operatoren $A \in \mathcal{B}(\h',\h'')$ und $B \in \mathcal{B}(\h'',\h)$, erhalten wir für die Indizes $\ind(AT) = \ind(TB) = \ind(T)$.
         \item Für $T \in \mathcal{FB}(\h,\h')$ gilt
         \begin{equation}
             \ind(T) = \dim(\ker(T^\ast T)) - \dim(\ker(TT^\ast)).
