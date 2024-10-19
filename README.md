@@ -1,20 +1,21 @@
 # Fredholm-Operatoren
 
-Ein Fredholm-Operator \(T\) ist ein Operator zwischen Banachräumen, für den die Lösungen des inhomogenen linearen Problems \(T x = y\) durch „endlich viele Daten“ charakterisiert werden können, ähnlich wie im endlich-dimensionalen Fall. Konkret bedeutet dies, dass der Kern \(\ker(T)\) endlich-dimensional ist, d.h. es existiert eine endliche Basis \(\{v_1, \dots, v_n\}\) für \(\ker(T)\). Ebenso ist der Kokern \(\operatorname{coker}(T) = Y / \operatorname{Im}(T)\) endlich-dimensional, sodass es endlich viele lineare Funktionale \(\{\varphi_1, \dots, \varphi_k\}\) auf \(Y\) gibt, welche der Bedingung \(y \in \operatorname{Im}(T)\) genügen. Diese Bedingung ist äquivalent zu \(\varphi_1(y) = \dots = \varphi_k(y) = 0\). Die Gleichung \(T x = y\) besitzt genau dann eine Lösung, wenn \(\varphi_1(y) = \dots = \varphi_k(y) = 0\). Falls eine Lösung existiert, bildet die Lösungsmenge eine endliche affine Untermenge, gegeben durch \(x_0 + \langle v_1, \dots, v_n \rangle\), wobei \(x_0\) eine spezielle Lösung des inhomogenen Problems ist, d.h. \(T x_0 = y\). 
+# Fredholm-Operatoren
 
-Der Index von \(T\) ist definiert als 
+Ein Fredholm-Operator `T` ist ein Operator zwischen Banachräumen, für den die Lösungen des inhomogenen linearen Problems `T x = y` durch „endlich viele Daten“ charakterisiert werden können, ähnlich wie im endlich-dimensionalen Fall. Konkret bedeutet dies, dass der Kern `\ker(T)` endlich-dimensional ist, d.h. es existiert eine endliche Basis `{v_1, \dots, v_n}` für `\ker(T)`. Ebenso ist der Kokern `\operatorname{coker}(T) = Y / \operatorname{Im}(T)` endlich-dimensional, sodass es endlich viele lineare Funktionale `{φ_1, \dots, φ_k}` auf `Y` gibt, welche der Bedingung `y \in \operatorname{Im}(T)` genügen. Diese Bedingung ist äquivalent zu `φ_1(y) = \dots = φ_k(y) = 0`. 
 
-\[
-\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\operatorname{coker}(T)) = n - k.
-\]
+Die Gleichung `T x = y` besitzt genau dann eine Lösung, wenn `φ_1(y) = \dots = φ_k(y) = 0`. Falls eine Lösung existiert, bildet die Lösungsmenge eine endliche affine Untermenge, gegeben durch `x_0 + \langle v_1, \dots, v_n \rangle`, wobei `x_0` eine spezielle Lösung des inhomogenen Problems ist, d.h. `T x_0 = y`.
+
+Der Index von `T` ist definiert als die Differenz der Dimension des Kerns mit der des Kokerns.
+
 
 Ein entscheidender Aspekt des Index ist seine Invarianz gegenüber kompakten Störungen und seine Stetigkeit auf der offenen Menge der Fredholm-Operatoren. Die Zusammenhangskomponenten dieser Menge stehen in Bijektion mit dem Index.
 
-Im endlich-dimensionalen Fall, wenn \(T: \mathbb{C}^n \to \mathbb{C}^n\) eine lineare Abbildung ist, ist \(T\) automatisch ein Fredholm-Operator mit Index Null. Sei \(\lambda \in \mathbb{C}\), dann ist der Kern von \(T - \lambda I\) für fast alle \(\lambda\) trivial und \(T - \lambda I\) surjektiv, außer wenn \(\lambda\) ein Eigenwert von \(T\) ist. In diesem Fall erhöht sich die Dimension des Kerns (um die geometrische Vielfachheit von \(\lambda\)), während die Dimension des Bildes gemäß dem Satz von Rang und Kern (Rang-Nullitätssatz) um denselben Betrag abnimmt, sodass der Index erhalten bleibt.
+Im endlich-dimensionalen Fall, wenn `T: \mathbb{C}^n \to \mathbb{C}^n` eine lineare Abbildung ist, ist `T` automatisch ein Fredholm-Operator mit Index Null. Sei `\lambda \in \mathbb{C}`, dann ist der Kern von `T - \lambda I` für fast alle `\lambda` trivial und `T - \lambda I` surjektiv, außer wenn `\lambda` ein Eigenwert von `T` ist. In diesem Fall erhöht sich die Dimension des Kerns (um die geometrische Vielfachheit von `\lambda`), während die Dimension des Bildes gemäß dem Rang-Nullitätssatz um denselben Betrag abnimmt, sodass der Index erhalten bleibt.
 
-Im unendlich-dimensionalen Fall gilt der Satz von Rang und Kern im Allgemeinen nicht, und es besteht im Normalfall kein einfacher Zusammenhang zwischen den Dimensionen von \(\ker(T)\) und \(\operatorname{Im}(T)\). Für Fredholm-Operatoren \(T: X \to Y\) mit Index \(L\) jedoch beschreibt \(L\) die Differenz zwischen den Dimensionen des Kerns und des Kokerns. 
+Im unendlich-dimensionalen Fall gilt der Rang-Nullitätssatz im Allgemeinen nicht, und es besteht im Normalfall kein einfacher Zusammenhang zwischen den Dimensionen von `\ker(T)` und `\operatorname{Im}(T)`. Für Fredholm-Operatoren `T: X \to Y` mit Index `L` jedoch beschreibt `L` die Differenz zwischen den Dimensionen des Kerns und des Kokerns.
 
-Wenn \(X = Y\) ist und \(T - \lambda I\) für alle \(\lambda\) Fredholm bleibt, dann wird der Sprung in der Dimension des Kerns von \(T - \lambda I\), wenn \(\lambda\) ein Eigenwert ist, sowie die entsprechende Abnahme der Dimension des Bildes, durch den Index \(L\) bestimmt. Für \(L = 0\) gleichen sich diese Sprünge aus. Ist \(L > 0\), so kann \(T - \lambda I\) nicht injektiv sein; falls \(T - \lambda I\) surjektiv ist, beträgt die Dimension des Kerns genau \(L\). Generell kann die Dimension des Kerns von \(L\) auf \(L + r\) (mit \(r > 0\)) anwachsen, wobei die Dimension des Bildes um \(r\) abnimmt, um dies zu kompensieren. Dies bedeutet, dass die Dimension des Kokerns ebenfalls um \(r\) zunimmt. Wenn \(L < 0\) ist, kann \(T - \lambda I\) nicht surjektiv sein, und eine analoge Analyse ergibt sich.
+Wenn `X = Y` ist und `T - \lambda I` für alle `\lambda` Fredholm bleibt, dann wird der Sprung in der Dimension des Kerns von `T - \lambda I`, wenn `\lambda` ein Eigenwert ist, sowie die entsprechende Abnahme der Dimension des Bildes, durch den Index `L` bestimmt. Für `L = 0` gleichen sich diese Sprünge aus. Ist `L > 0`, so kann `T - \lambda I` nicht injektiv sein; falls `T - \lambda I` surjektiv ist, beträgt die Dimension des Kerns genau `L`. Generell kann die Dimension des Kerns von `L` auf `L + r` (mit `r > 0`) anwachsen, wobei die Dimension des Bildes um `r` abnimmt, um dies zu kompensieren. Dies bedeutet, dass die Dimension des Kokerns ebenfalls um `r` zunimmt. Wenn `L < 0` ist, kann `T - \lambda I` nicht surjektiv sein, und eine analoge Analyse ergibt sich.
 
 ## 📚 Inhalte
 
@@ -28,7 +29,7 @@ In diesem Repository findest du:
 
 Die gesamte Theorie und die dazugehörigen Beweise kannst du bequem als PDF-Dokument herunterladen. Klicke einfach auf den folgenden Link:
 
-**[📥 Download Fredholm-Dokumentation (PDF)](https://github.com/karhunenloeve/FunkanaFredholm/raw/main/Fredholm_Operatoren.pdf)**
+[📥 Download Fredholm-Dokumentation (PDF)](https://github.com/karhunenloeve/FunkanaFredholm/raw/main/Fredholm_Operatoren.pdf)
 
 > **Hinweis:** Wenn du die LaTeX-Dateien selbst kompilieren möchtest, stelle sicher, dass du eine aktuelle LaTeX-Distribution installiert hast, um alle Pakete und Bibliotheken korrekt zu nutzen.
 
@@ -52,7 +53,7 @@ Falls du das Projekt auf deinem lokalen Rechner klonen möchtest, führe folgend
 4. Kompiliere die LaTeX-Dateien (wenn du selbst Änderungen vornehmen möchtest):
 
     ```bash
-    pdflatex Fredholm_Operatoren.tex
+    pdflatex main.tex
     ```
 
 5. Genieße die mathematische Schönheit von Fredholm-Operatoren!
