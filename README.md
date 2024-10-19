@@ -1,4 +1,4 @@
-# Fredholm-Operatoren
+# 💡 Fredholm-Operatoren
 Ein Fredholm-Operator $T$ ist ein Operator zwischen Banachräumen, für den die Lösungen des inhomogenen linearen Problems $T x = y$ durch „endlich viele Daten“ charakterisiert werden können, ähnlich wie im endlich-dimensionalen Fall. Konkret bedeutet dies, dass der Kern $\ker(T)$ endlich-dimensional ist, d.h. es existiert eine endliche Basis $\{v_1, \dots, v_n\}$ für $\ker(T)$. Ebenso ist der Kokern $\text{coker}(T) = Y / \text{Im}(T)$ endlich-dimensional, sodass es endlich viele lineare Funktionale $\{\varphi_1, \dots, \varphi_k\}$ auf $Y$ gibt, welche der Bedingung $y \in \text{Im}(T)$ genügen. Diese Bedingung ist äquivalent zu $\varphi_1(y) = \dots = \varphi_k(y) = 0$. 
 
 Die Gleichung $T x = y$ besitzt genau dann eine Lösung, wenn $\varphi_1(y) = \dots = \varphi_k(y) = 0$. Falls eine Lösung existiert, bildet die Lösungsmenge eine endliche affine Untermenge, gegeben durch $x_0 + \langle v_1, \dots, v_n \rangle$, wobei $x_0$ eine spezielle Lösung des inhomogenen Problems ist, d.h. $T x_0 = y$.
@@ -21,47 +21,10 @@ In diesem Repository findest du:
 - **Mathematische Beweise**: Ausführliche Beweise zur Stabilität von Fredholm-Operatoren unter kompakten Störungen und deren Rolle in der Funktionalanalysis.
 - **LaTeX-Dateien**: Alle Inhalte sind in LaTeX vorbereitet und eignen sich perfekt für wissenschaftliche Arbeiten.
 
-## 📄 Download der Dokumentation
-
-Die gesamte Theorie und die dazugehörigen Beweise kannst du bequem als PDF-Dokument herunterladen. Klicke einfach auf den folgenden Link:
-
-[📥 Download Fredholm-Dokumentation (PDF)](https://github.com/karhunenloeve/FunkanaFredholm/raw/main/Fredholm_Operatoren.pdf)
-
-> **Hinweis:** Wenn du die LaTeX-Dateien selbst kompilieren möchtest, stelle sicher, dass du eine aktuelle LaTeX-Distribution installiert hast, um alle Pakete und Bibliotheken korrekt zu nutzen.
-
-## 🚀 Installation und Nutzung
-
-Falls du das Projekt auf deinem lokalen Rechner klonen möchtest, führe folgende Schritte aus:
-
-1. Öffne dein Terminal.
-2. Klone das Repository mit:
-
-    ```bash
-    git clone https://github.com/karhunenloeve/FunkanaFredholm.git
-    ```
-
-3. Navigiere ins Verzeichnis:
-
-    ```bash
-    cd FunkanaFredholm
-    ```
-
-4. Kompiliere die LaTeX-Dateien (wenn du selbst Änderungen vornehmen möchtest):
-
-    ```bash
-    pdflatex main.tex
-    ```
-
-5. Genieße die mathematische Schönheit von Fredholm-Operatoren!
-
 ## 🧠 Voraussetzungen
 
 - Kenntnisse in Funktionalanalysis und linearen Operatoren sind hilfreich.
 - LaTeX-Kenntnisse, falls du die Dokumentation anpassen oder erweitern möchtest.
-
-## 💡 Motivation
-
-Fredholm-Operatoren sind nicht nur von theoretischem Interesse, sondern finden auch breite Anwendung in der Analysis von partiellen Differentialgleichungen, der Spektraltheorie und der numerischen Mathematik. Dieses Projekt zielt darauf ab, die Theorie so zugänglich wie möglich zu machen und bietet eine solide Grundlage für weiterführende Studien.
 
 ---
 
