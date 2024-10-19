@@ -163,7 +163,13 @@ Nun betrachten wir das Produkt $TS$. Da $S$ beschränkt ist, ist $S(\mathcal{B})
 
 Da wir in Satz \ref{schauder} bereits gezeigt haben, dass auch $T^\ast, S^\ast \in \mathcal{K}(\mathcal{H})$, können wir ein analoges Argument verwenden um zu zeigen, dass auch $T^\ast S^\ast, S^\ast T^\ast \in \mathcal{K}(\mathcal{H})$. Also ist $\mathcal{K}(\mathcal{H})$ ein $\ast$-Ideal in $\mathcal{B}(\mathcal{H})$.
 
-Die Menge $\mathcal{K}(\mathcal{H})$ ist abgeschlossen in der normierten Struktur von $\mathcal{B}(\mathcal{H})$, da jeder konvergente Folge von kompakten Operatoren gegen einen kompakten Operator konvergiert \cite[Bd. 1, ]{ReedSimonI}. TBD
+Die Menge $\mathcal{K}(\mathcal{H})$ ist abgeschlossen in der normierten Struktur von $\mathcal{B}(\mathcal{H})$, da jeder konvergente Folge von kompakten Operatoren gegen einen kompakten Operator konvergiert.\footnote{Sei \(\{K_n\}_{n=1}^{\infty} \subset \mathcal{K}(\mathcal{H})\) eine konvergente Folge kompakter Operatoren in der Operatornorm, d.h., es existiert ein \(T \in \mathcal{B}(\mathcal{H})\), sodass $\|K_n - T\| \to 0 \quad \text{für} \quad n \to \infty$. Zu zeigen ist, dass \(T \in \mathcal{K}(\mathcal{H})\), also dass \(T\) kompakt ist.
+
+Sei \((x_n)_{n\geq 1}\) eine beschränkte Folge in \(\mathcal{H}\), d.h. es existiert ein \(C > 0\), sodass \(\|x_n\| \leq C\) für alle \(n \in \mathbb{N}\). Da jeder \(K_n\) kompakt ist, existiert für jede Folge \((x_n)_{n\geq 1}\) eine Teilfolge \((x_{n_k})_{k\geq 1}\), sodass \(K_n(x_{n_k})_{k\geq 1}\) eine konvergente Teilfolge in \(\mathcal{H}\) bildet. Wir müssen nun zeigen, dass \(T(x_n)_{n\geq 1}\) ebenfalls eine konvergente Teilfolge besitzt.
+
+Da \(\|K_n - T\| \to 0\), folgt für jede beschränkte Folge \((x_n)_{n\geq 1}\), dass $\|K_n(x_n)_{n\geq 1} - T(x_n)_{n\geq 1}\| \leq \|K_n - T\| \|(x_n)_{n\geq 1}\|_\h \to 0 \quad \text{für} \quad n \to \infty$. Da \(K_n(x_{n_k})_{k\geq 1}\) eine konvergente Teilfolge ist und \(T(x_n)_{n\geq 1}\) nahe bei \(K_n(x_n)_{n\geq 1}\) liegt, folgt, dass auch \(T(x_n)_{n\geq 1}\) eine konvergente Teilfolge besitzt. Somit ist \(T\) kompakt.
+
+Also ist \(T \in \mathcal{K}(\mathcal{H})\), und daher ist \(\mathcal{K}(\mathcal{H})\) abgeschlossen in \(\mathcal{B}(\mathcal{H})\). }
 
 Wir definieren die Einbettung $\iota: \mathcal{K}(\mathcal{H}) \to \mathcal{B}(\mathcal{H})$ durch $\iota(T) = T$ für $T \in \mathcal{K}(\mathcal{H})$. Da $\iota$ eine Inklusion ist, ist sie injektiv. Die Menge $\mathcal{Q}(\mathcal{H})$ wird als der Quotient $\mathcal{B}(\mathcal{H}) / \mathcal{K}(\mathcal{H})$ definiert. Zwei Operatoren $T, S \in \mathcal{B}(\mathcal{H})$ sind äquivalent modulo $\mathcal{K}(\mathcal{H})$, wenn $T - S \in \mathcal{K}(\mathcal{H})$. Die Menge $\mathcal{Q}(\mathcal{H})$ ist mit den Operationen der Addition und Skalarmultiplikation, sowie der Multiplikation der Äquivalenzklassen und der $\ast$-Operation ausgestattet:
    \[
