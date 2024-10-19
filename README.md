@@ -1,6 +1,4 @@
 # Fredholm-Operatoren
-# Fredholm-Operatoren
-
 Ein Fredholm-Operator $T$ ist ein Operator zwischen Banachräumen, für den die Lösungen des inhomogenen linearen Problems $T x = y$ durch „endlich viele Daten“ charakterisiert werden können, ähnlich wie im endlich-dimensionalen Fall. Konkret bedeutet dies, dass der Kern $\ker(T)$ endlich-dimensional ist, d.h. es existiert eine endliche Basis $\{v_1, \dots, v_n\}$ für $\ker(T)$. Ebenso ist der Kokern $\text{coker}(T) = Y / \text{Im}(T)$ endlich-dimensional, sodass es endlich viele lineare Funktionale $\{\varphi_1, \dots, \varphi_k\}$ auf $Y$ gibt, welche der Bedingung $y \in \text{Im}(T)$ genügen. Diese Bedingung ist äquivalent zu $\varphi_1(y) = \dots = \varphi_k(y) = 0$. 
 
 Die Gleichung $T x = y$ besitzt genau dann eine Lösung, wenn $\varphi_1(y) = \dots = \varphi_k(y) = 0$. Falls eine Lösung existiert, bildet die Lösungsmenge eine endliche affine Untermenge, gegeben durch $x_0 + \langle v_1, \dots, v_n \rangle$, wobei $x_0$ eine spezielle Lösung des inhomogenen Problems ist, d.h. $T x_0 = y$.
