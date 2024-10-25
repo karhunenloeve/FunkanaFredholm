@@ -46,7 +46,7 @@
 \newtheorem{corollary}[conj]{Korollar}
 \newtheorem{assume}[conj]{Annahme}
 
-\title{\textbf{Beschränkte Fremdholmoperatoren und deren Fremdholmindex}}
+\title{\textbf{Beschränkte Fremdholmoperatoren und deren Fremdholmindex auf separablen Hilberträumen}}
 \author{
 \textbf{Luciano Melodia} \\
 Seminar zur Funktionalanalysis \\
@@ -60,11 +60,7 @@ Friedrich-Alexander Universität Erlangen-Nürnberg \\
 \maketitle
 
 \begin{abstract}
-Ein Fredholm-Operator \(T\) ist ein Operator zwischen Banachräumen, für den die Lösungen des inhomogenen linearen Problems \(T x = y\) durch „endlich viele Daten“ charakterisiert werden können, ähnlich wie im endlich-dimensionalen Fall. Konkret bedeutet dies, dass der Kern \(\ker(T)\) endlich-dimensional ist, d.h. es existiert eine endliche Basis \(\{v_1, \dots, v_n\}\) für \(\ker(T)\). Ebenso ist der Kokern \(\operatorname{coker}(T) = Y / \operatorname{Im}(T)\) endlich-dimensional, sodass es endlich viele lineare Funktionale \(\{\varphi_1, \dots, \varphi_k\}\) auf \(Y\) gibt, welche der Bedingung \(y \in \operatorname{Im}(T)\) genügen, welche äquivalent ist zu \(\varphi_1(y) = \dots = \varphi_k(y) = 0\). Die Gleichung \(T x = y\) besitzt genau dann eine Lösung, wenn \(\varphi_1(y) = \dots = \varphi_k(y) = 0\). Falls eine Lösung existiert, bildet die Lösungsmenge eine endliche affine Untermenge, gegeben durch \(x_0 + \langle v_1, \dots, v_n \rangle\), wobei \(x_0\) eine spezielle Lösung des inhomogenen Problems ist, d.h. \(T x_0 = y\). Der Index von \(T\) ist definiert als \(\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\operatorname{coker}(T)) = n - k\). Ein entscheidender Aspekt des Index ist seine Invarianz gegenüber kompakten Störungen und seine Stetigkeit auf der offenen Menge der Fredholm-Operatoren. Die Zusammenhangskomponenten dieser Menge stehen in Bijektion mit dem Index.
-
-Im endlich-dimensionalen Fall, wenn \(T: \mathbb{C}^n \to \mathbb{C}^n\) eine lineare Abbildung ist, ist \(T\) automatisch ein Fredholm-Operator mit Index Null. Sei \(\lambda \in \mathbb{C}\), dann ist der Kern von \(T - \lambda I\) für fast alle \(\lambda\) trivial und \(T - \lambda I\) surjektiv, außer wenn \(\lambda\) ein Eigenwert von \(T\) ist. In diesem Fall erhöht sich die Dimension des Kerns (um die geometrische Vielfachheit von \(\lambda\)), während die Dimension des Bildes gemäß dem Satz von Rang und Kern (Rang-Nullitätssatz) um denselben Betrag abnimmt, sodass der Index erhalten bleibt.
-
-Im unendlich-dimensionalen Fall gilt der Satz von Rang und Kern im Allgemeinen nicht, und es besteht im Normalfall kein einfacher Zusammenhang zwischen den Dimensionen von \(\ker(T)\) und \(\operatorname{Im}(T)\). Für Fredholm-Operatoren \(T: X \to Y\) mit Index \(L\) jedoch beschreibt \(L\) die Differenz zwischen den Dimensionen des Kerns und des Kokerns. Wenn \(X = Y\) ist und \(T - \lambda I\) für alle \(\lambda\) Fredholm bleibt, dann wird der Sprung in der Dimension des Kerns von \(T - \lambda I\), wenn \(\lambda\) ein Eigenwert ist, sowie die entsprechende Abnahme der Dimension des Bildes, durch den Index \(L\) bestimmt. Für \(L = 0\) gleichen sich diese Sprünge aus. Ist \(L > 0\), so kann \(T - \lambda I\) nicht injektiv sein; falls \(T - \lambda I\) surjektiv ist, beträgt die Dimension des Kerns genau \(L\). Generell kann die Dimension des Kerns von \(L\) auf \(L + r\) (mit \(r > 0\)) anwachsen, wobei die Dimension des Bildes um \(r\) abnimmt, um dies zu kompensieren. Dies bedeutet, dass die Dimension des Kokerns ebenfalls um \(r\) zunimmt. Wenn \(L < 0\) ist, kann \(T - \lambda I\) nicht surjektiv sein, und eine analoge Analyse ergibt sich.
+Ein Fredholm-Operator \(T\) ist ein Operator zwischen Hilberträumen, für den die Lösungen des inhomogenen linearen Problems \(T x = y\) durch „endlich viele Daten“ charakterisiert werden können, ähnlich wie im endlich-dimensionalen Fall. Konkret bedeutet dies, dass der Kern \(\ker(T)\) endlich-dimensional ist, d.h. es existiert eine endliche Basis \(\{\varphi_1, \dots, \varphi_n\}\) für \(\ker(T)\). Ebenso ist der Kokern \(\operatorname{coker}(T) = \mathcal{Y} / \operatorname{Im}(T)\) endlich-dimensional, sodass es endlich viele lineare Funktionale \(\{S_1, \dots, S_k\}\) auf \(\mathcal{Y}\) gibt, welche der Bedingung \(\phi \in \operatorname{Im}(T)\) genügen, welche äquivalent ist zu \(S_1 \phi = \dots = S_k \phi  = 0\). Die Gleichung \(T \varphi = \phi\) besitzt genau dann eine Lösung, wenn \(S_1 \phi = \dots = S_k \phi = 0\). Falls eine Lösung existiert, bildet die Lösungsmenge eine endliche affine Untermenge, gegeben durch \(\varphi_0 + \langle \varphi_1, \dots, \varphi_n \rangle\), wobei \(\varphi_0\) eine spezielle Lösung des inhomogenen Problems ist, d.h. \(T \varphi_0 = \phi\). Der Index von \(T\) ist definiert als \(\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\operatorname{coker}(T)) = n - k\). Ein entscheidender Aspekt des Index ist seine Invarianz gegenüber kompakten Störungen und seine Stetigkeit auf der offenen Menge der Fredholm-Operatoren. Die Zusammenhangskomponenten dieser Menge stehen in Bijektion mit dem Index. Im endlich-dimensionalen Fall, wenn \(T: \mathbb{C}^n \to \mathbb{C}^n\) eine lineare Abbildung ist, ist \(T\) automatisch ein Fredholm-Operator mit Index Null. Sei \(\lambda \in \mathbb{C}\), dann ist der Kern von \(T - \lambda I\) für fast alle \(\lambda\) trivial und \(T - \lambda I\) surjektiv, außer wenn \(\lambda\) ein Eigenwert von \(T\) ist. In diesem Fall erhöht sich die Dimension des Kerns (um die geometrische Vielfachheit von \(\lambda\)), während die Dimension des Bildes gemäß dem Satz von Rang und Kern (Rang-Nullitätssatz) um denselben Betrag abnimmt, sodass der Index erhalten bleibt. Im unendlich-dimensionalen Fall gilt der Satz von Rang und Kern im Allgemeinen nicht, und es besteht im Normalfall kein einfacher Zusammenhang zwischen den Dimensionen von \(\ker(T)\) und \(\operatorname{Im}(T)\). Für Fredholm-Operatoren \(T: \mathcal{H} \to \mathcal{Y}\) mit Index \(L\) jedoch beschreibt \(L\) die Differenz zwischen den Dimensionen des Kerns und des Kokerns. Wenn \(\mathcal{H} = \mathcal{Y}\) ist und \(T - \lambda I\) für alle \(\lambda\) Fredholm bleibt, dann wird der Sprung in der Dimension des Kerns von \(T - \lambda I\), wenn \(\lambda\) ein Eigenwert ist, sowie die entsprechende Abnahme der Dimension des Bildes, durch den Index \(L\) bestimmt. Für \(L = 0\) gleichen sich diese Sprünge aus. Ist \(L > 0\), so kann \(T - \lambda I\) nicht injektiv sein; falls \(T - \lambda I\) surjektiv ist, beträgt die Dimension des Kerns genau \(L\). Generell kann die Dimension des Kerns von \(L\) auf \(L + r\) (mit \(r > 0\)) anwachsen, wobei die Dimension des Bildes um \(r\) abnimmt, um dies zu kompensieren. Dies bedeutet, dass die Dimension des Kokerns ebenfalls um \(r\) zunimmt. Wenn \(L < 0\) ist, kann \(T - \lambda I\) nicht surjektiv sein, und eine analoge Analyse ergibt sich.
 \end{abstract}
 
 \begin{Large}
@@ -72,23 +68,77 @@ Im unendlich-dimensionalen Fall gilt der Satz von Rang und Kern im Allgemeinen n
 \end{Large}
 
 \onehalfspacing
+
+\section{Fredholmoperatoren und Fredholmindex}
+Ein Fredholm-Operator ist ein beschränkter linearer Operator \( T \) zwischen Hilberträumen \( \h \) und \( \mathcal{Y} \), der eine fundamentale Rolle in der Theorie der linearen Operatoren spielt. Die wesentliche Eigenschaft eines Fredholm-Operators ist, dass er „fast invertierbar“ ist, was bedeutet, dass er sich wie ein Operator verhält, der bis auf endliche Störungen invertierbar ist. Konkret verlangt man von einem Fredholm-Operator, dass sowohl der Kern als auch der Kokern endlich-dimensional sind. Der Kern eines Operators \( T \), geschrieben als \( \ker(T) = \{ \varphi \in \mathcal{H} \mid T\varphi = 0 \} \), ist der Raum der Elemente, die auf Null abgebildet werden. Dass der Kern endlich-dimensional ist, bedeutet, dass die Anzahl linear unabhängiger Elemente in \( \ker(T) \) endlich ist. Der Kokern ist definiert als der Quotientenraum \( \mathcal{H}_B / \operatorname{Im}(T) \), also der Raum der Elemente, die nicht im Bild des Operators liegen. Wenn dieser Raum endlich-dimensional ist, bedeutet das, dass der Operator „nahe“ an einem surjektiven Operator liegt, dessen Bild den gesamten Raum \( \mathcal{H}_B \) abdeckt. Der Index eines Fredholm-Operators ist eine sehr wichtige Zahl, die seine algebraischen Eigenschaften beschreibt. Er ist definiert als die Differenz zwischen der Dimension des Kerns und der Dimension des Kokerns:
+\[
+\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\operatorname{coker}(T)).
+\]
+Dieser Index ist eine ganze Zahl, und was ihn besonders macht, ist seine Stabilität unter kompakten Störungen. Das bedeutet, dass der Index eines Fredholm-Operators unverändert bleibt, wenn man den Operator um einen kompakten Operator ergänzt, was eine zentrale Eigenschaft in vielen Anwendungen der Theorie der Fredholm-Operatoren ist, wie etwa in der Theorie der elliptischen Differentialoperatoren. Diese Stabilität ist besonders nützlich in Situationen, in denen man die invertierbaren Eigenschaften eines Operators durch kleine oder endliche Störungen nicht verlieren möchte. Der Index eines Fredholm-Operators fasst also die Abweichung von der Invertierbarkeit zusammen. Ein Fredholm-Operator mit Index Null ist fast invertierbar, während ein Operator mit nichttrivialem Index eine gewisse Abweichung davon aufweist, die jedoch kontrollierbar ist, da der Kern und der Kokern endlich-dimensional sind.
+
+\begin{definition}
+    Ein Operator $T \in \mathcal{B}(\h,\mathcal{Y})$ ist Fredholmsch genau dann, wenn
+    \begin{enumerate}
+        \item $\dim(\ker(T)) < \infty$,
+        \item $\dim(\ker(T^\ast)) < \infty$,
+        \item $\im(T)$ ist abgeschlossen in $\mathcal{Y}$.
+    \end{enumerate}
+\end{definition}
+
+Die Menge der Fredholmoperatoren wird als $\mathcal{FB}(\h,\mathcal{Y})$ geschrieben.
+
+\begin{definition}
+    Der Index eines Fredholmoperators $T \in \mathcal{FB}(\h,\mathcal{Y})$ ist
+    \begin{align}
+        \ind(T) &= \dim(\ker(T)) - \dim(\ker(T^\ast))
+    \end{align}
+    Da $\ker(T^\ast) = \im(T)^\perp$ und $\im(T)$ abgeschlossen ist für einen Fredholmoperator, können wir den Index auch umschreiben als
+    \begin{align}
+        \ind(T) &= \dim(\ker(T)) - \dim(\mathcal{Y}/\im(T)) \nonumber\\
+                &= \dim(\ker(T)) - \dim(\coker(T)).
+    \end{align}
+\end{definition}
+
+\begin{example}\noindent
+    \begin{enumerate}
+        \item Sei $\mathbf{1}: \h \to \h$ die Identität auf einem endlichdimensionalen Hilbertraum. Dann ist $\mathbf{1}$ Fredholmsch, denn $\dim(\ker(\mathbf{1})) = 0 < \infty$, $\dim(\ker(\mathbf{1}^\ast)) = \dim(\ker(\mathbf{1})) = 0 \leq \infty$ und $\im(\mathbf{1}) = \h$ ist abgeschlossen. Somit ist der Index $\operatorname{ind}(\mathbf{1}) = \dim(\ker(\mathbf{1})) - \dim(\operatorname{coker}(\mathbf{1})) = 0 - 0 = 0$.
+        \item Sei \( T = \mathbf{1} + K \), wobei \( \mathbf{1} \) die Identität und \( K \) ein kompakter Operator ist. \( T \) ist demnach beschränkt und linear, da \( \mathbf{1} \) und \( K \) beschränkte lineare Operatoren sind. Nach Korollar \ref{summeFredholm} ist $T$ Fredholmsch. Es gilt $\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\coker(T)) = 0 - 0 = \operatorname{ind}(\mathbf{1})$.
+        \item Sei $S: \ell^2(\mathbb{N}) \to \ell^2(\mathbb{N})$ der rechte Shift-Operator, definiert durch $S(x_n) = x_{n+1}$ für $n \geq 2$ und $S(x_n) = 0$ für $n=1$. Dann ist $\ker(S) = \{0\}$ also $\dim(\ker(S)) < \infty$ und $\im(S) = \{ (x_n)_{n \geq 1} \in \ell^2(\mathbb{N}) \; \vert \; x_1 = 0\}$. Somit sehen wir, dass $\h/\im(S) = \langle (\delta_{1n})_{n \geq 1} \rangle_{\mathbb{C}}$ und damit $\dim(\h/\im(S)) = 1 < \infty$ da $\{(\delta_{mn})_{n \geq 1}\}_{m \geq 1}$ eine Othonormalbasis für $\ell^2(\mathbb{N})$ definiert. Sei $(x_n)^{n \geq 1}_k \to (x_n)_{n \geq 1}$ für $k \to \infty$ eine Folge in $\im(S)$. Dann gilt
+        \begin{align}
+            &\left\vert \langle (\delta_{1n})_{n \geq 1}, (x_n)_{n \geq 1} \rangle_{\ell^2(\mathbb{N})} - \langle (\delta_{1n})_{n \geq 1}, (x_n)^{n \geq 1}_k \rangle_{\ell^2(\mathbb{N})} \right\vert = \nonumber\\
+            & \vert x_1 - (x_1)_k \vert \nonumber \xrightarrow[]{k \to \infty} \vert x_1 - 0 \vert = 0,
+        \end{align}
+        also ist $(x_n)_{n \geq 1} \in \im(S)$ und das Bild von $S$ somit abgeschlossen. Der Index von \( S \) ist somit $\operatorname{ind}(S) = \dim(\ker(S)) - \dim(\operatorname{coker}(S)) = 0 - 1 = -1.$
+        \item Sei \( H = L^2(\mathbb{R}) \) der Hilbertraum der quadratintegrierbaren Funktionen auf \( \mathbb{R} \), und sei $m(x) = 1 + \frac{1}{1 + x^2}$ eine beschränkte Funktion, da $\|m\|_\infty = \sup_{x \in \mathbb{R}} |m(x)| = 1 + 1 = 2 < \infty$. Da \( m(x) = 1 + \frac{1}{1 + x^2} \geq 1 \) für alle \( x \in \mathbb{R} \), folgt \( m(x)^{-1} \leq 1 \), also ist \( m(x)^{-1} \) beschränkt. Beachte, dass \( m(x) \geq 1 \) für alle \( x \in \mathbb{R} \), also ist \( m(x) \) überall von Null verschieden. Der Multiplikationsoperator \( M_m \) ist definiert durch $(M_m f)(x) = m(x) f(x)$ für $f \in L^2(\mathbb{R})$. Wir möchten zeigen, dass der Operator \( M_m \) ein Fredholm-Operator ist. Zunächst betrachten wir den Kern
+        \begin{align}
+        \ker(M_m) = \left\{ f \in L^2(\mathbb{R}) \mid m(x) f(x) = 0 \text{ fast überall auf } \mathbb{R} \right\}.
+        \end{align}
+        Da \( m(x) \geq 1 > 0 \) für alle \( x \in \mathbb{R} \), impliziert \( m(x) f(x) = 0 \), dass \( f(x) = 0 \) fast überall auf \( \mathbb{R} \). Somit ist $\ker(M_m) = \{0\}$, der Kern ist also trivial. Das Bild ist
+        \begin{align}
+            \operatorname{Im}(M_m) = \left\{ g \in L^2(\mathbb{R}) \mid \exists f \in L^2(\mathbb{R}) \text{ mit } g(x) = m(x) f(x) \text{ fast überall} \right\}.
+        \end{align}
+        Da \( m(x) \geq 1 \) und \( m(x) \in L^\infty(\mathbb{R}) \), ist die Funktion \( m(x)^{-1} \) ebenfalls beschränkt, genauer gilt \( 0 < m(x)^{-1} \leq 1 \). Somit ist der Operator \( M_m \) invertierbar mit der Umkehrabbildung $(M_m^{-1} g)(x) = m(x)^{-1} g(x)$, die ebenfalls beschränkt ist. Da \( M_m \) beschränkt und invertierbar ist, ist \( \operatorname{Im}(M_m) = L^2(\mathbb{R}) \) und der Quotientenraum \( L^2(\mathbb{R}) / \operatorname{Im}(M_m) \) ist trivial, d.h. $\operatorname{coker}(M_m) = \{0\}$. Da sowohl der Kern als auch das Koker endlichdimensional sind (Dimension Null), ist \( M_m \) ein Fredholm-Operator mit Index Null.
+    \end{enumerate}
+\end{example}
+
+
 \section{Spektraltheorie kompakter Operatoren}
-Ein Hilbertraum heißt separabel, wenn er eine abzählbare Orthonormalbasis besitzt. Wir betrachten separable komplexe Hilberträume $\h, \h'$ unendlicher Dimension mit assoziierter Norm $\Vert \varphi \Vert_{\h} = \langle \varphi, \varphi \rangle^{\frac{1}{2}}_{\h}$ für $\varphi \in \h$ bzw. $\Vert \varphi \Vert_{\h'} = \langle \varphi, \varphi \rangle^{\frac{1}{2}}_{\h'}$ für $\varphi \in \h'$. Für einen linearen Operator $T: \h \rightarrow \h'$ ist dessen Operatornorm wie folgt definiert:
+Ein Hilbertraum heißt separabel, wenn er eine abzählbare Orthonormalbasis besitzt. Wir betrachten separable komplexe Hilberträume $\h, \mathcal{Y}$ unendlicher Dimension mit assoziierter Norm $\Vert \varphi \Vert_{\h} = \langle \varphi, \varphi \rangle^{\frac{1}{2}}_{\h}$ für $\varphi \in \h$ bzw. $\Vert \varphi \Vert_{\mathcal{Y}} = \langle \varphi, \varphi \rangle^{\frac{1}{2}}_{\mathcal{Y}}$ für $\varphi \in \mathcal{Y}$. Für einen linearen Operator $T: \h \rightarrow \mathcal{Y}$ ist dessen Operatornorm wie folgt definiert:
 \begin{align}
-    \Vert T \Vert = \sup_{\varphi \neq 0} \frac{\Vert T\varphi \Vert_{\h'}}{\Vert\varphi\Vert_\h} = \sup_{\Vert\varphi\Vert_\h = 1} \Vert T\varphi\Vert_{\h'}.
+    \Vert T \Vert = \sup_{\varphi \neq 0} \frac{\Vert T\varphi \Vert_{\mathcal{Y}}}{\Vert\varphi\Vert_\h} = \sup_{\Vert\varphi\Vert_\h = 1} \Vert T\varphi\Vert_{\mathcal{Y}}.
 \end{align}
-Der Operator $T$ heißt beschränkt, falls $\Vert T \Vert < \infty$. Die Menge aller beschränkten linearen Hilbertraumoperatoren $\h \to \h'$ wird mit $\B(\h,\h')$ bezeichnet. Für $\h = \h'$ schreibt man auch $\B(\h)$. $\B(\h)$ ist eine Banach $\ast$-algebra, d.h. $\ast: \h \to \h$, $A \mapsto A^\ast$ (die Adjunktion des Operators, da wir ein Skalarprodukt zur Verfügung haben) ist 
+Der Operator $T$ heißt beschränkt, falls $\Vert T \Vert < \infty$. Die Menge aller beschränkten linearen Hilbertraumoperatoren $\h \to \mathcal{Y}$ wird mit $\B(\h,\mathcal{Y})$ bezeichnet. Für $\h = \mathcal{Y}$ schreibt man auch $\B(\h)$. Für $\B(\h)$ ist $\ast: \h \to \h$, $A \mapsto A^\ast \ldots$
 \begin{enumerate}
     \item[(1)] eine Involution, d.h. $(T^\ast)^\ast = T$,
     \item[(2)] antimultiplikativ $(TS)^\ast = T^\ast S^\ast$,
-    \item[(3)] antilinear $(\lambda T + \mu S)^\ast = \overline{\lambda} T^\ast + \overline{\mu} S^\ast$, 
-    \item[(4)] isometrisch $\Vert T^\star \Vert = \Vert T \Vert$ und
-    \item[(5)] eine $C^\ast$-algebra, d.h. $\Vert T \Vert^2 = \Vert T^\ast T \Vert$.
+    \item[(3)] antilinear $(\lambda T + \mu S)^\ast = \overline{\lambda} T^\ast + \overline{\mu} S^\ast$,
+    \item[(4)] für die Operatornorm gilt $\Vert TS  \Vert \leq \Vert T \Vert \Vert S \Vert$ und
+    \item[(5)] $\B(\h)$ ist eine $C^\ast$-algebra, d.h. $\Vert T \Vert^2 = \Vert T^\ast T \Vert$.
 \end{enumerate}
-Als Banachraum ist $\B(\h)$ vollständig und es gilt für die Operatornorm $\Vert TS  \Vert \leq \Vert T \Vert \Vert S \Vert$.
+Als Banachraum ist $\B(\h)$ vollständig und die Adjunktion ist eine Isometrie $\Vert T^\star \Vert = \Vert T \Vert$.
 
 \begin{definition}
-    Der Einheitsball in $\h$ ist die Menge $\mathbb{B}_\h := \{ T \in \h \; \vert \; \Vert T \Vert_\h \leq 1 \}$.
+    Der Einheitsball in $\h$ ist die Menge $\mathbb{B}_\h := \{ \varphi \in \h \; \vert \; \Vert \varphi \Vert_\h \leq 1 \}$.
 \end{definition}
 
 \begin{proposition}
@@ -98,17 +148,17 @@ Als Banachraum ist $\B(\h)$ vollständig und es gilt für die Operatornorm $\Ver
 \begin{proof}
     Sei $\h$ ein endlichdimensionaler Hilbertraum. Damit ist $\h \cong \mathbb{C}^{\vert B_\h \vert}$ für eine insbesondere endliche Basis $B_\h$. Dann gilt für alle $T \in \mathbb{B}_\h$, dass $\Vert T \Vert_\h \leq 1$ nach Definition des Einheitsballs. Da $\mathbb{B}_\h$ abgeschlossen und beschränkt ist, ist diese Menge auch kompakt, nach Heine-Borel.
 
-    Sei $\h$ unendlichdimensional. Dann hat $\h$ eine Basis $B_h$ mit unendlich vielen Elementen. Wir betrachten ein abzählbares Orthonormalsystem $B^\sharp_\h = \{b_n\}_\on$, welches im separablen Fall als Basis gewählt werden kann und im nicht separablen Fall als Teilmenge $B^\sharp_\h \subset B_\h$. Dann ist $\Vert b_n \Vert_\h = 1$ und $b_n \in \mathbb{B}_\h$ für alle $n \geq 1$. Aufgrund der Orthonormalität gilt $\Vert b_n - b_m \Vert_\h = \sqrt{2}$ für alle $n \neq m$ und $b_n,b_m \in B^\sharp_\h$. Also ist keine Teilfolge von $(b_n)_\on$ Cauchy. Somit ist $(b_n)_\on$ eine Folge ohne konvergente Teilfolge, aber in $\mathbb{B}_\h$ enthalten. Damit ist $\mathbb{B}_\h$ nicht kompakt.
+    Sei $\h$ unendlichdimensional und separabel. Dann hat $\h$ eine Basis $B_h$ mit abz. vielen Elementen. Wir betrachten ein abzählbares Orthonormalsystem $B^\sharp_\h = \{b_n\}_\on$. Dann ist $\Vert b_n \Vert_\h = 1$ und $b_n \in \mathbb{B}_\h$ für alle $n \geq 1$. Aufgrund der Orthonormalität gilt $\Vert b_n - b_m \Vert_\h = \sqrt{2}$ für alle $n \neq m$ und $b_n,b_m \in B^\sharp_\h$. Also ist keine Teilfolge von $(b_n)_\on$ Cauchy. Somit ist $(b_n)_\on$ eine Folge ohne konvergente Teilfolge, aber in $\mathbb{B}_\h$ enthalten. Damit ist $\mathbb{B}_\h$ nicht kompakt.
 \end{proof}
 
 Wir erinnern an die Klasse der kompakten Operatoren. Sie werden definiert als beschränkte lineare Operatoren, welche $\mathbb{B}_\h$ auf eine präkompakte Menge abbilden. Eine Menge heißt präkompakt, wenn ihr Abschluss kompakt ist.
 
 \begin{definition}
-    Ein Operator $K \in \mathcal{B}(\h,\h')$ heißt kompakt genau dann, wenn das Bild des Einheitsballs $K(\mathbb{B}_\h)$ präkompakt ist, also einen kompakten Abschluss besitzt. Die Menge aller kompakten Operatoren von $\h$ nach $\h'$ wird als $\mathcal{K}(\h,\h')$ geschrieben. Für $\h=\h'$ schreiben wir $\mathcal{K}(\h) \coloneq \mathcal{K}(\h,\h)$. 
+    Ein Operator $K \in \mathcal{B}(\h,\mathcal{Y})$ heißt kompakt genau dann, wenn das Bild des Einheitsballs $K(\mathbb{B}_\h)$ präkompakt ist, also einen kompakten Abschluss besitzt. Die Menge aller kompakten Operatoren von $\h$ nach $\mathcal{Y}$ wird als $\mathcal{K}(\h,\mathcal{Y})$ geschrieben. Für $\h=\mathcal{Y}$ schreiben wir $\mathcal{K}(\h) \coloneq \mathcal{K}(\h,\h)$.
 \end{definition}
 
 \begin{remark}
-    Es gilt $\mathcal{K}(\h,\h') \subset \mathcal{B}(\h,\h')$.
+    Es gilt $\mathcal{K}(\h,\mathcal{Y}) \subset \mathcal{B}(\h,\mathcal{Y})$.
 \end{remark}
 
 \begin{remark}
@@ -116,34 +166,46 @@ Zur kurzen Erinnerung: Jede beschränkte Folge in einem kompakten metrischen Rau
 \end{remark}
 
 \begin{proposition}
-    $K \in \mathcal{B}(\h,\h')$ ist kompakt genau dann, wenn für jede beschränkte Folge $(\varphi_n)_{n \geq 1}$ in $\h$ die Folge $(K\varphi_n)_{n \geq 1}$ in $\h'$ eine konvergente Teilfolge hat.
+    $K \in \mathcal{B}(\h,\mathcal{Y})$ ist kompakt genau dann, wenn für jede beschränkte Folge $(\varphi_n)_{n \geq 1}$ in $\h$ die Folge $(K\varphi_n)_{n \geq 1}$ in $\mathcal{Y}$ eine konvergente Teilfolge hat.
 \end{proposition}
 
 \begin{proof}
-Sei $K \in \mathcal{B}(\h,\h')$ ein beschränkter Operator.
+Sei $K \in \mathcal{B}(\h,\mathcal{Y})$ ein beschränkter Operator.
 
-Angenommen, $K$ ist kompakt. Das bedeutet, dass $K$ eine beschränkte Menge in $\h$ auf eine präkompakte Menge in $\h'$ abbildet. Sei $(\varphi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$. Da $K$ kompakt ist, ist $\{K\varphi_n \; \vert \; n \geq 1\}$ enthalten in einer präkompakten Menge $K' \subset \h'$. Nach Definition der Präkompaktheit besitzt $(K\varphi_n)_{n \geq 1}$ eine konvergente Teilfolge in $K'$.
+Angenommen, $K$ ist kompakt. Das bedeutet, dass $K$ eine beschränkte Menge in $\h$ auf eine präkompakte Menge in $\mathcal{Y}$ abbildet. Sei $(\varphi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$. Da $K$ kompakt ist, ist $\{K\varphi_n \; \vert \; n \geq 1\}$ enthalten in einer präkompakten Menge $K' \subset \mathcal{Y}$. Nach Definition der Präkompaktheit besitzt $(K\varphi_n)_{n \geq 1}$ eine konvergente Teilfolge in $K'$.
 
-Angenommen, für jede beschränkte Folge $(\varphi_n)_{n \geq 1}$ in $\h$ besitzt $(K\varphi_n)_{n \geq 1}$ eine konvergente Teilfolge in $\h'$. Sei $B \subset \h$ eine beschränkte Menge. Dann können wir eine Folge $(\varphi_n)_{n \geq 1} \subset B$ wählen, die eine konvergente Teilfolge $(K\varphi_{n_k})_{k \geq 1}$ in $\h'$ hat. Also ist $(K\varphi_{n_k})_{k \geq 1}$ eine konvergente Teilfolge der Folge $(K\varphi_{n})_{n \geq 1}$. Dies zeigt, dass $K(B)$ präkompakt ist, also ist $K$ kompakt.
+Angenommen, für jede beschränkte Folge $(\varphi_n)_{n \geq 1}$ in $\h$ besitzt $(K\varphi_n)_{n \geq 1}$ eine konvergente Teilfolge in $\mathcal{Y}$. Sei $B \subset \h$ eine beschränkte Menge. Dann können wir eine Folge $(\varphi_n)_{n \geq 1} \subset B$ wählen, die eine konvergente Teilfolge $(K\varphi_{n_k})_{k \geq 1}$ in $\mathcal{Y}$ hat. Also ist $(K\varphi_{n_k})_{k \geq 1}$ eine konvergente Teilfolge der Folge $(K\varphi_{n})_{n \geq 1}$. Dies zeigt, dass $K(B)$ präkompakt ist, also ist $K$ kompakt.
 \end{proof}
 
 \begin{theorem}
     \label{schauder}
-    Für $K \in \mathcal{K}(\h,\h'), A \in \mathcal{B}(\h',\h'')$ und $B \in \mathcal{B}(\h'',\h)$, wobei $\h''$ ein anderer separabler Hilbertraum ist, sind die Kompositionen $AK \in \mathcal{B}(\h,\h'')$ und $KB \in \mathcal{B}(\h'',\h')$ kompakt. Weiterhin ist der adjungierte Operator $K^\ast \in \mathcal{B}(\h',\h)$ kompakt.
+    Für $K \in \mathcal{K}(\h,\mathcal{Y}), A \in \mathcal{B}(\mathcal{Y},\mathcal{Z})$ und $B \in \mathcal{B}(\mathcal{Z},\h)$, wobei $\mathcal{Z}$ ein anderer separabler Hilbertraum ist, sind die Kompositionen $AK \in \mathcal{B}(\h,\mathcal{Z})$ und $KB \in \mathcal{B}(\mathcal{Z},\mathcal{Y})$ kompakt. Weiterhin ist der adjungierte Operator $K^\ast \in \mathcal{B}(\mathcal{Y},\h)$ kompakt.
 \end{theorem}
 
 \begin{proof}
-Sei \( K \in \mathcal{K}(\h, \h') \) ein kompakter Operator und \( \h \) und \( \h' \) separable Hilberträume. Sei \( (\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \h \). Da \( K \) kompakt ist, besitzt \( (K\varphi_n)_{n \geq 1} \) eine in \( \h' \) konvergente Teilfolge, sagen wir \( (K\varphi_{n_k})_{k \geq 1} \), mit \( K\varphi_{n_k} \xrightarrow[]{k \rightarrow \infty} \phi \in \h' \). Da \( A \in \mathcal{B}(\h', \h'') \) beschränkt und damit stetig ist, folgt, dass \( A K\varphi_{n_k} \xrightarrow[]{k \rightarrow \infty} A\phi \in \h'' \). Somit hat die Folge \( (AK\varphi_n)_{n \geq 1} \) eine konvergente Teilfolge, und damit ist \( AK \) kompakt.
+Sei \( K \in \mathcal{K}(\h, \mathcal{Y}) \) ein kompakter Operator und \( \h \) und \( \mathcal{Y} \) separable Hilberträume. Sei \( (\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \h \). Da \( K \) kompakt ist, besitzt \( (K\varphi_n)_{n \geq 1} \) eine in \( \mathcal{Y} \) konvergente Teilfolge, sagen wir \( (K\varphi_{n_k})_{k \geq 1} \), mit \( K\varphi_{n_k} \xrightarrow[]{k \rightarrow \infty} \phi \in \mathcal{Y} \). Da \( A \in \mathcal{B}(\mathcal{Y}, \mathcal{Z}) \) beschränkt und damit stetig ist, folgt, dass \( A K\varphi_{n_k} \xrightarrow[]{k \rightarrow \infty} A\phi \in \mathcal{Z} \). Somit hat die Folge \( (AK\varphi_n)_{n \geq 1} \) eine konvergente Teilfolge, und damit ist \( AK \) kompakt.
 
-Sei \( (\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \h'' \). Da \( B \in \mathcal{B}(\h'', \h') \) beschränkt ist, ist \( (B\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \h' \). Da \( K \) kompakt ist, besitzt \( (KB\varphi_n)_{n \geq 1} \) eine konvergente Teilfolge in \( \h' \). Somit ist \( KB \) kompakt.
+Sei \( (\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \mathcal{Z} \). Da \( B \in \mathcal{B}(\mathcal{Z}, \mathcal{Y}) \) beschränkt ist, ist \( (B\varphi_n)_{n \geq 1} \) eine beschränkte Folge in \( \mathcal{Y} \). Da \( K \) kompakt ist, besitzt \( (KB\varphi_n)_{n \geq 1} \) eine konvergente Teilfolge in \( \mathcal{Y} \). Somit ist \( KB \) kompakt.
 
-Betrachte eine beschränkte Folge $(\varphi_n)_{n \geq 1} \subset \h'$, mit $\Vert \varphi_n - \varphi_m \Vert_{\h'} \leq M$ für alle $n,m \in \mathbb{N}$. Da $K^\ast$ beschränkt ist hat $(KK^\ast\varphi_n)_{n \geq 1} \subset \h'$ eine konvergente Teilfolge $(KK^\ast\varphi_{n_k})_{n \geq 1}$. Es gilt nun mittels Skalarprodukt
+Betrachte eine beschränkte Folge $(\varphi_n)_{n \geq 1} \subset \mathcal{Y}$, mit $\Vert \varphi_n - \varphi_m \Vert_{\mathcal{Y}} \leq M$ für alle $n,m \in \mathbb{N}$. Da $K^\ast$ beschränkt ist hat $(KK^\ast\varphi_n)_{n \geq 1} \subset \mathcal{Y}$ eine konvergente Teilfolge $(KK^\ast\varphi_{n_k})_{n \geq 1}$. Es gilt nun mittels Skalarprodukt
 \begin{align}
     \Vert K^\ast \varphi_{n_k} - K^\ast\varphi_{n_l} \Vert^2_\h &= \langle KK^\ast (\varphi_{n_k} - \varphi_{n_l}), \varphi_{n_k} - \varphi_{n_l} \rangle \\
-    &\leq \Vert KK^\ast (\varphi_{n_k} - \varphi_{n_l}) \Vert_{\h'} \cdot \Vert \varphi_{n_k} - \varphi_{n_l} \Vert_{\h'} \\
-    &\leq M \Vert KK^\ast (\varphi_{n_k} - \varphi_{n_l}) \Vert_{\h'} \to 0.
+    &\leq \Vert KK^\ast (\varphi_{n_k} - \varphi_{n_l}) \Vert_{\mathcal{Y}} \cdot \Vert \varphi_{n_k} - \varphi_{n_l} \Vert_{\mathcal{Y}} \\
+    &\leq M \Vert KK^\ast (\varphi_{n_k} - \varphi_{n_l}) \Vert_{\mathcal{Y}} \to 0.
 \end{align}
-Also ist $(K^\ast \varphi_{n_k})_{k \in \mathbb{N}}$ eine Cauchy-Folge in einem Hilbertraum und aufgrund von dessen Vollständigkeit auch konvergent. Also hat $(K^\ast \varphi_{n})_{n \geq 1}$ eine konvergente Teilfolge für jede beschränkte Folge $(\varphi_n)_{n \geq 1} \subset \h'$, weshalb $K^\ast$ kompakt ist.
+Also ist $(K^\ast \varphi_{n_k})_{k \in \mathbb{N}}$ eine Cauchy-Folge in einem Hilbertraum und aufgrund von dessen Vollständigkeit auch konvergent. Also hat $(K^\ast \varphi_{n})_{n \geq 1}$ eine konvergente Teilfolge für jede beschränkte Folge $(\varphi_n)_{n \geq 1} \subset \mathcal{Y}$, weshalb $K^\ast$ kompakt ist.
+\end{proof}
+
+\begin{proposition}
+Sei \( \mathcal{A} \) eine \( C^\ast \)-Algebra und \( I \) ein zweiseitiges \(\ast\)-Ideal in \( \mathcal{A} \). Der Quotient \( \mathcal{A}/I \) ist definiert als die Menge der Äquivalenzklassen \( \{[a] \mid [a] = a + I \} \) für \( a \in \mathcal{A} \), mit
+\begin{align}
+    [a] + [b] = [a + b], \quad [a] \cdot [b] = [a b], \quad [a]^* = [a^*],
+\end{align}
+und der Norm $\| [a] \| = \inf \{ \| a + i \| \mid i \in I \}$. Mit dieser Norm wird \( \mathcal{A}/I \) zu einer \( C^\ast \)-Algebra.
+\end{proposition}
+
+\begin{proof}
+    Einfaches nachrechnen.
 \end{proof}
 
 \begin{theorem}
@@ -159,7 +221,7 @@ Wir zeigen als erstes, dass für alle $T \in \mathcal{K}(\mathcal{H})$ und $S \i
 
 Sei $\mathcal{B} \subseteq \mathcal{H}$ eine beschränkte Menge. Da $T$ kompakt ist, ist das Bild $T(\mathcal{B})$ kompakt, da kompakte Operatoren beschränkte Mengen auf Mengen mit kompaktem Abschluss abbilden. Da $S$ ein beschränkter Operator ist, ist $S(T(B))$ ebenfalls beschränkt. Da $T(B)$ kompakt ist, bleibt $S(T(\mathcal{B}))$ kompakt, weil das Bild unter einem beschränkten Operator von einer kompakten Menge kompakt bleibt. Folglich ist $ST \in \mathcal{K}(\mathcal{H})$.
 
-Nun betrachten wir das Produkt $TS$. Da $S$ beschränkt ist, ist $S(\mathcal{B})$ ebenfalls beschränkt. Da $T$ kompakt ist, ist $T(S(\mathcal{B}))$ kompakt. Folglich ist $TS \in \mathcal{K}(\mathcal{H})$. Also ist $\mathcal{K}(\mathcal{H})$ ein Ideal in $\mathcal{B}(\mathcal{H})$. 
+Nun betrachten wir das Produkt $TS$. Da $S$ beschränkt ist, ist $S(\mathcal{B})$ ebenfalls beschränkt. Da $T$ kompakt ist, ist $T(S(\mathcal{B}))$ kompakt. Folglich ist $TS \in \mathcal{K}(\mathcal{H})$. Also ist $\mathcal{K}(\mathcal{H})$ ein Ideal in $\mathcal{B}(\mathcal{H})$.
 
 Da wir in Satz \ref{schauder} bereits gezeigt haben, dass auch $T^\ast, S^\ast \in \mathcal{K}(\mathcal{H})$, können wir ein analoges Argument verwenden um zu zeigen, dass auch $T^\ast S^\ast, S^\ast T^\ast \in \mathcal{K}(\mathcal{H})$. Also ist $\mathcal{K}(\mathcal{H})$ ein $\ast$-Ideal in $\mathcal{B}(\mathcal{H})$.
 
@@ -211,24 +273,14 @@ Nachzulesen in \cite[VI.2.5]{werner2018funktionalanalysis}
 \end{proof}
 
 \section{Eigenschaften beschränkter Fremdholmoperatoren}
-\begin{definition}
-    Ein Operator $T \in \mathcal{B}(\h,\h')$ ist Fredholmsch genau dann, wenn
-    \begin{enumerate}
-        \item $\dim(\ker(T)) < \infty$,
-        \item $\dim(\ker(T^\ast)) < \infty$,
-        \item $\im(T)$ ist abgeschlossen in $\h'$.
-    \end{enumerate}
-\end{definition}
-
-Die Menge der Fredholmoperatoren wird als $\mathcal{FB}(\h,\h')$ geschrieben.
 
 \begin{theorem}
     \label{fredholm}
-    Für $T \in \mathcal{B}(\h,\h')$ sind die folgenden Aussagen äquivalent:
+    Für $T \in \mathcal{B}(\h,\mathcal{Y})$ sind die folgenden Aussagen äquivalent:
     \begin{enumerate}
         \item $T$ ist ein Fredholmoperator,
-        \item $ \dim(\ker(T)) < \infty$ und $\dim(\h' / \im(T)) < \infty$,
-        \item es gibt ein eindeutiges $T^\dagger_0 \in \mathcal{B}(\h',\h)$ mit
+        \item $ \dim(\ker(T)) < \infty$ und $\dim(\mathcal{Y} / \im(T)) < \infty$,
+        \item es gibt ein eindeutiges $T^\dagger_0 \in \mathcal{B}(\mathcal{Y},\h)$ mit
         \begin{equation}
             \ker(T^\dagger_0) = \ker(T^\ast), \quad \ker(T^{\dagger\ast}_0) = \ker(T),
         \end{equation}
@@ -236,28 +288,28 @@ Die Menge der Fredholmoperatoren wird als $\mathcal{FB}(\h,\h')$ geschrieben.
         \begin{equation}
             \dim(\im(\mathbf{1}-T^\dagger_0T)) < \infty, \quad \dim(\im(\mathbf{1}-TT^\dagger_0)) < \infty.
         \end{equation}
-        \item Es gibt einen Operator $T^\dagger\in \mathcal{B}(\h',\h)$ für $T$, welcher die Bedingung $TT^\dagger-\mathbf{1} \in \mathcal{K}(\h')$ und $T^\dagger T-\mathbf{1} \in \mathcal{K}(\h)$ erfüllt. Dieser heißt im Folgenden Pseudoinverses.
+        \item Es gibt einen Operator $T^\dagger\in \mathcal{B}(\mathcal{Y},\h)$ für $T$, welcher die Bedingung $TT^\dagger-\mathbf{1} \in \mathcal{K}(\mathcal{Y})$ und $T^\dagger T-\mathbf{1} \in \mathcal{K}(\h)$ erfüllt. Dieser heißt im Folgenden Pseudoinverses.
     \end{enumerate}
 \end{theorem}
 
 \begin{proof}\noindent
 \begin{itemize}
-    \item 1 $\implies$ 2: Da $T$ Fredholmsch ist, folgt aus der Definition $\dim(\ker(T)) < \infty$. Da nach der Fredholmschen Alternative \cite[Satz 5.9]{lechner} gilt $\ker(T^\ast) = \im(T)^\perp$, ist $\dim(\ker(T^\ast)) = \dim(\im(T)^\perp) < \infty$ und $\im(T)^\perp$ ist abgeschlossen \cite[Lemma 2.4]{lechner}. Da \( \h' = \im(T) \oplus \im(T)^\perp \)  \cite[Satz 2.16, Projektionstheorem]{lechner}, muss auch $\im(T)$ abgeschlossen sein, weil $\h'$ selbst abgeschlossen ist und eine direkte Summe genau dann einen abgeschlossenen Hilbertraum ergibt, wenn deren Summanden abgeschlossen sind. Weiterhin kann jedes \( \phi \in \h' \) eindeutig als \( \phi = \hat{\phi} + \hat{\phi}^\perp \) geschrieben werden, wobei \( \hat{\phi} \in \im(T) \) und \( \hat{\phi}^\perp \in \im(T)^\perp \) ist. Da $\im(T)$ abgeschlosser Unterraum eines Hilbertraums ist, ist dieser selbst ein Hilbertraum \cite[Satz 4.7]{werner2018funktionalanalysis}. Selbiges gilt für dessen orthogonales Komplement $\im(T)^\perp$. Damit können wir den Hilbertraumquotienten $\h' / \im(T)$ bilden. Definiere die Abbildung \( \Phi: \h' / \im(T) \to \im(T)^\perp \) durch \( \Phi([\phi]) = \hat{\phi}^\perp \), wobei \( \hat{\phi}^\perp \) der orthogonale Anteil von \( \phi \) ist. Diese Abbildung ist wohldefiniert, da, wenn \( \phi_1 \sim \phi_2 \), \( \phi_1 - \phi_2 \in \im(T) \) gilt, also die orthogonalen Komponenten gleich sind. \( \Phi \) ist injektiv, da aus \( \Phi([\phi]) = 0 \) folgt, dass \( \hat{\phi}^\perp = 0 \) ist, also \( \phi \in \im(T) \), was \( [\phi] = [0] \) impliziert. Surjektivität folgt, da für jedes \( \hat{\phi}^\perp \in \im(T)^\perp \) gilt, dass \( \Phi([\hat{\phi}^\perp]) = \hat{\phi}^\perp \) ist. Daher ist \( \Phi \) ein Isomorphismus (die Linearität der Abbildung ergibt sich aus der Definition), und es folgt, dass \( \h' / \im(T) \cong \im(T)^\perp \) gilt. Also haben wir $\dim(\h'/\im(T)) < \infty$.
-    \item 2 $\implies$ 1: Da $\ker(T^\ast) = \im(T)^\perp$, bleibt es zu zeigen, dass $\dim(\h'/\im(T))) < \infty$ impliziert, dass $\im(T)$ abgeschlossen ist. Dazu betrachten wir die Einschränkung $\textasciitilde{T} \coloneq T\vert_{\ker(T)^\perp}: \ker(T)^\perp \rightarrow \h'$. Diese ist stetig, injektiv und hat Bild $\im(\textasciitilde{T}) = \im(T)$. Es genügt also, die Aussage für eine injektive Abbildung mit endlich-dimensionalem Kokern zu zeigen, welche wir ebenfalls mit $T$ bezeichnen. Sei $\{\phi_1, \ldots, \phi_N\}$ eine Basis von $\h'/\im(T)$. Dann können wir eine lineare Abbildung $\hat{T}: \mathbb{C}^N \oplus \h \to \h'$ durch
+    \item 1 $\implies$ 2: Da $T$ Fredholmsch ist, folgt aus der Definition $\dim(\ker(T)) < \infty$. Da nach \cite[Lemma 2.23]{lechner} gilt $\ker(T^\ast) = \im(T)^\perp$, ist $\dim(\ker(T^\ast)) = \dim(\im(T)^\perp) < \infty$ und $\im(T)^\perp$ ist abgeschlossen \cite[Lemma 2.4]{lechner}. Es gilt \( \mathcal{Y} = \im(T) \oplus \im(T)^\perp \) aufgrund des abgeschlossenen Bilds von $T$. Weiterhin kann jedes \( \phi \in \mathcal{Y} \) eindeutig als \( \phi = \hat{\phi} + \hat{\phi}^\perp \) geschrieben werden, wobei \( \hat{\phi} \in \im(T) \) und \( \hat{\phi}^\perp \in \im(T)^\perp \) ist. Da $\im(T)$ abgeschlosser Unterraum eines Hilbertraums ist, ist dieser selbst ein Hilbertraum \cite[Satz 4.7]{werner2018funktionalanalysis}. Selbiges gilt für dessen orthogonales Komplement $\im(T)^\perp$. Damit können wir den Hilbertraumquotienten $\mathcal{Y} / \im(T)$ bilden. Definiere die Abbildung \( \Phi: \mathcal{Y} / \im(T) \to \im(T)^\perp \) durch \( \Phi([\phi]) = \hat{\phi}^\perp \), wobei \( \hat{\phi}^\perp \) der orthogonale Anteil von \( \phi \) ist. Diese Abbildung ist wohldefiniert, da, wenn \( \phi_1 \sim \phi_2 \), \( \phi_1 - \phi_2 \in \im(T) \) gilt, also die orthogonalen Komponenten gleich sind. \( \Phi \) ist injektiv, da aus \( \Phi([\phi]) = 0 \) folgt, dass \( \hat{\phi}^\perp = 0 \) ist, also \( \phi \in \im(T) \), was \( [\phi] = [0] \) impliziert. Surjektivität folgt, da für jedes \( \hat{\phi}^\perp \in \im(T)^\perp \) gilt, dass \( \Phi([\hat{\phi}^\perp]) = \hat{\phi}^\perp \) ist. Daher ist \( \Phi \) ein Isomorphismus (die Linearität der Abbildung ergibt sich aus der Definition), und es folgt, dass \( \mathcal{Y} / \im(T) \cong \im(T)^\perp \) gilt. Also haben wir $\dim(\mathcal{Y}/\im(T)) < \infty$.
+    \item 2 $\implies$ 1: Da $\ker(T^\ast) = \im(T)^\perp$, bleibt es zu zeigen, dass $\dim(\mathcal{Y}/\im(T))) < \infty$ impliziert, dass $\im(T)$ abgeschlossen ist. Dazu betrachten wir die Einschränkung $\widetilde{T} \coloneq T\vert_{\ker(T)^\perp}: \ker(T)^\perp \rightarrow \mathcal{Y}$. Diese ist stetig, injektiv und hat Bild $\im(\widetilde{T}) = \im(T)$. Es genügt also, die Aussage für eine injektive Abbildung mit endlich-dimensionalem Kokern zu zeigen, welche wir ebenfalls mit $T$ bezeichnen. Sei $\{\phi_1, \ldots, \phi_N\}$ eine Basis von $\mathcal{Y}/\im(T)$. Dann können wir eine lineare Abbildung $\hat{T}: \mathbb{C}^N \oplus \h \to \mathcal{Y}$ durch
     \begin{align}
         \hat{T}(\lambda_1, \ldots, \lambda_N, \psi) = \sum_{n=1}^{N} \lambda_n \phi_n + T\psi
     \end{align}
-    definieren. Diese Abbildung ist bijektiv und stetig. Also impliziert der Satz vom stetigen Inversen,\footnote{Dieser besagt, dass für zwei Banachräume $\h,\h'$ und $T \in \mathcal{B}(\h,\h')$ bijektiv, die Umkehrabbildung $T^{-1} \in \mathcal{B}(\h',\h)$ ebenfalls beschränkt ist \cite[Korollar 3.24]{lechner}.} dass auch $\hat{T}^{-1}$ stetig ist. Da $0 \oplus \h \subset \mathbb{C}^N \oplus \h$ abgeschlossen ist, weil $\h$ abgeschlossen ist, folgt auch, dass dessen Urbild unter einer stetigen Abbildung abgeschlossen ist. Also ist $\im(T) = \hat{T}(0,\h) = (\hat{T}^{-1})^{-1}(0,\h)$ abgeschlossen.
-    \item 1 $\implies$ 3: Da $T\vert_{\ker(T)^\perp}: \ker(T)^\perp \to \im(T)$ nach Annahme eine bijektive stetige lineare Abbildung zwischen Hilberträumen ist, also insbesondere Banachräumen, impliziert der Satz vom stetigen Inversen \cite[Korollar 3.24]{lechner} die Existenz einer stetigen Inversen Abbildung $T^\dagger_0: \im(T) \to \ker(T)^\perp$ ($T^\dagger_0$ kann verstanden werden als die Einschränkung von $T^\ast\vert_{\im(T)}$). Diese Abbildung kann auf ganz $\h'$ fortgesetzt werden, indem wir $T^\dagger_0 \psi = 0$ für $\psi \in \im(T)^\perp$ setzen. Dann ergibt sich $(TT^\dagger_0)^2 = TT^\dagger_0$ und $(TT^\dagger_0)^\ast = T^{\dagger\ast}_0 T^\ast =  TT^\dagger_0$ (dies sieht man, da die $TT^\dagger_0\vert_{\im(T)} = \mathbf{1}_{\im(T)}$ und $T^\dagger_0T\vert_{\ker(T)^\perp} = \mathbf{1}_{\ker(T)^\perp}$, während $TT^\dagger_0\vert_{\im(T)^\perp} = 0$ und $T^\dagger_0\vert_{\im(T)^\perp}T = 0$), also
+    definieren. Diese Abbildung ist bijektiv und stetig. Also impliziert der Satz vom stetigen Inversen,\footnote{Dieser impliziert, dass für zwei Hilberträume $\h,\mathcal{Y}$ und $T \in \mathcal{B}(\h,\mathcal{Y})$ bijektiv, die Umkehrabbildung $T^{-1} \in \mathcal{B}(\mathcal{Y},\h)$ ebenfalls beschränkt ist \cite[Korollar 3.24]{lechner}.} dass auch $\hat{T}^{-1}$ stetig ist. Da $0 \oplus \h \subset \mathbb{C}^N \oplus \h$ abgeschlossen ist, weil $\h$ abgeschlossen ist, folgt auch, dass dessen Urbild unter einer stetigen Abbildung abgeschlossen ist. Also ist $\im(T) = \hat{T}(0,\h) = (\hat{T}^{-1})^{-1}(0,\h)$ abgeschlossen.
+    \item 1 $\implies$ 3: Da $T\vert_{\ker(T)^\perp}: \ker(T)^\perp \to \im(T)$ nach Annahme eine bijektive stetige lineare Abbildung zwischen Hilberträumen ist, also insbesondere Banachräumen, impliziert der Satz vom stetigen Inversen \cite[Korollar 3.24]{lechner} die Existenz einer stetigen Inversen Abbildung $T^\dagger_0: \im(T) \to \ker(T)^\perp$ ($T^\dagger_0$ kann verstanden werden als die Einschränkung von $T^\ast\vert_{\im(T)}$). Diese Abbildung kann auf ganz $\mathcal{Y}$ fortgesetzt werden, indem wir $T^\dagger_0 \psi = 0$ für $\psi \in \im(T)^\perp$ setzen. Dann ergibt sich $(TT^\dagger_0)^2 = TT^\dagger_0$ und $(TT^\dagger_0)^\ast = T^{\dagger\ast}_0 T^\ast =  TT^\dagger_0$ (dies sieht man, da die $TT^\dagger_0\vert_{\im(T)} = \mathbf{1}_{\im(T)}$ und $T^\dagger_0T\vert_{\ker(T)^\perp} = \mathbf{1}_{\ker(T)^\perp}$, während $TT^\dagger_0\vert_{\im(T)^\perp} = 0$ und $T^\dagger_0\vert_{\im(T)^\perp}T = 0$), also
     \begin{align*}
-        TT^\dagger_0  \text{ ist orthogonale Projektion in $\h'$ auf } \im(T) &= \overline{\im(T)} = \ker(T^\ast)^\perp, \\
+        TT^\dagger_0  \text{ ist orthogonale Projektion in $\mathcal{Y}$ auf } \im(T) &= \overline{\im(T)} = \ker(T^\ast)^\perp, \\
         T^\dagger_0 T \text{ ist orthogonale Projektion in $\h$ auf } \ker(T)^\perp &= \overline{\im(T^\ast)}.
     \end{align*}
     Die Eindeutigkeit der linearen Abbildung folgt sofort. Es gilt $\ker(T_0^\dagger) = \im(T)^\perp = \ker(T^\ast)$ und somit auch $\ker(T_0^{\dagger\ast}) = \im(T^\ast)^\perp = \ker(T)$. Die Operatoren $1-TT^\dagger_0$ und $1-T^\dagger_0 T$ wirken auf $\im(T)^\perp = \ker(T^\ast)$ bzw. $\ker(T)^{\perp\perp} = \ker(T)$, welche endlichdimensional sind, da $T$ Fredholmsch ist. Also sind deren Bilder auch endlichdimensional.
     \item 3 $\implies$ 4: Das folgt sofort aus der Tatsache, dass jeder beschränkte lineare Operator mit endlich-dimensionalem Bild kompakt ist -- unter Verwendung von Heine-Borel - da die Bilder Teilmengen von abgeschlossenen und beschränkten Mengen in einem endlichdimensionalen $\mathbb{C}$-Vektorraum sind.
     \item 4 $\implies$ 1: Wir nehmen an, dass $(\psi_n)_{n \geq 1}$ eine unendliche Orthonormalbasis von $\ker(T)$ ist. Diese Vektoren sind alle Eigenvektoren des kompakten Operators $K = T^\dagger T -1$ zum Eigenwert $-1$. Dies ist ein Widerspruch zu Satz \ref{Riesz}. Damit ist $\dim(\ker(T)) < \infty$.
 
-    Für $\ker(T^\ast)$ können wir auf dieselbe Art und Weise argumentieren, indem wir den kompakten Operator $\textasciitilde{K} = (TT^\dagger -1)^\ast$ verwenden. Also ist auch $\dim(\ker(T^\ast)) < \infty$.
+    Für $\ker(T^\ast)$ können wir auf dieselbe Art und Weise argumentieren, indem wir den kompakten Operator $\widetilde{K} = (TT^\dagger -1)^\ast$ verwenden. Also ist auch $\dim(\ker(T^\ast)) < \infty$.
 
     Es bleibt zu zeigen, dass $\im(T)$ abgeschlossen ist. Sei $K = T^\dagger T - 1$ und $L \in \mathcal{K}(\h)$ mit endlich dimensionalem Bild, so dass
     \begin{align}
@@ -278,7 +330,7 @@ Die Menge der Fredholmoperatoren wird als $\mathcal{FB}(\h,\h')$ geschrieben.
     \begin{align}
         \Vert \phi_n - \phi_m \Vert_\h \leq 2 \Vert T^\dagger \Vert_\h \Vert T\phi_n - T\phi_m \Vert_\h \xrightarrow[]{n,m \to \infty} 0.
     \end{align}
-    Also ist $(\phi_n)_{n \geq 1}$ eine Cauchy-Folge und hat Grenzwert $\phi = \lim_{n \to \infty} \phi_n \in \ker(L)$, wobei wir verwendet haben, dass $\overline{\ker(L)} = \ker(L)$ abgeschlossen ist, da der Kern eines jeden stetigen linearen Operators abgeschlossen ist.\footnote{$\ker(T) = T^{-1}(\{0\})$ und $\{0\} \subset \h'$ ist eine abgeschlossene Menge. Demnach ist das Urbild einer abgeschlossenen Menge unter einer stetigen Abbildung abgeschlossen, also ist $\ker(T)$ abgeschlossen.} Aufgrund der Stetigkeit von $T$ folgt auch $\psi = T\phi \in T(\ker(L))$. Andererseits
+    Also ist $(\phi_n)_{n \geq 1}$ eine Cauchy-Folge und hat Grenzwert $\phi = \lim_{n \to \infty} \phi_n \in \ker(L)$, wobei wir verwendet haben, dass $\overline{\ker(L)} = \ker(L)$ abgeschlossen ist, da der Kern eines jeden stetigen linearen Operators abgeschlossen ist.\footnote{$\ker(T) = T^{-1}(\{0\})$ und $\{0\} \subset \mathcal{Y}$ ist eine abgeschlossene Menge. Demnach ist das Urbild einer abgeschlossenen Menge unter einer stetigen Abbildung abgeschlossen, also ist $\ker(T)$ abgeschlossen.} Aufgrund der Stetigkeit von $T$ folgt auch $\psi = T\phi \in T(\ker(L))$. Andererseits
     \begin{align}
         T(\ker(L)^\perp) = T(\im(L^\ast)),
     \end{align}
@@ -286,28 +338,33 @@ Die Menge der Fredholmoperatoren wird als $\mathcal{FB}(\h,\h')$ geschrieben.
 \end{itemize}
 \end{proof}
 
+Als Konsequenzen ergeben sich folgende beiden Korollare:
+
+\begin{corollary}\noindent
+    \begin{enumerate}
+        \item Für $T \in \mathcal{FB}(\h,\mathcal{Y})$, $T' \in \mathcal{FB}(\mathcal{Z},\h)$, ist auch $TT'\in \mathcal{FB}(\mathcal{Z},\mathcal{Y})$.
+        \item Falls $T \in \mathcal{FB}(\h,\mathcal{Y})$, dann ist $T^\ast \in \mathcal{FB}(\mathcal{Y},\h)$ und $\ind(T^\ast) = - \ind(T)$.
+        \item Falls $A \in \mathcal{B}(\h,\mathcal{Y})$ invertierbar ist, dann ist $A \in \mathcal{FB}(\h,\mathcal{Y})$ und $\ind(A) = 0$.
+        \item Für $T \in \mathcal{FB}(\h,\mathcal{Y})$ und invertierbare Operatoren $A \in \mathcal{B}(\mathcal{Y},\mathcal{Z})$ und $B \in \mathcal{B}(\mathcal{Z},\h)$, erhalten wir für die Indizes $\ind(AT) = \ind(TB) = \ind(T)$.
+        \item Für $T \in \mathcal{FB}(\h,\mathcal{Y})$ gilt
+        \begin{align}
+            \ind(T) &= \dim(\ker(T^\ast T)) - \dim(\ker(TT^\ast)) \\
+                    &= \dim(\ker(T)) - \dim(\ker(T^\ast)).
+        \end{align}
+        Diese Gleichheit ergibt sich aus $\Vert T\varphi \Vert^2 = \langle T\varphi, T\varphi \rangle_\h = \langle \varphi, T^\ast T\varphi \rangle_\h = 0$, dann ist $\varphi \in \ker(T)$ aufgrund der Norm.
+        \item Für $T \in \mathcal{FB}(\h,\mathcal{Y})$ und $T' \in \mathcal{FB}(\mathcal{Z},\mathcal{Z}')$ erhalten wir $T \oplus T' \in \mathcal{FB}(\h \oplus \mathcal{Z}, \mathcal{Y} \oplus \mathcal{Z}')$ und $\ind(T \oplus T') = \ind(T) + \ind(T')$.
+    \end{enumerate}
+\end{corollary}
+
 \begin{corollary}
     \label{summeFredholm}
-    Falls $T \in \mathcal{B}(\h,\h')$ ein Fredholmoperator ist und $K \in \mathcal{K}(\h,\h')$ kompakt, dann ist $T+K$ auch ein Fredholmoperator. 
+    Falls $T \in \mathcal{B}(\h,\mathcal{Y})$ ein Fredholmoperator ist und $K \in \mathcal{K}(\h,\mathcal{Y})$ kompakt, dann ist $T+K$ auch ein Fredholmoperator.
 \end{corollary}
 
 \begin{proof}
-Sei $T^\dagger$ das Pseudoinverse von $T$. Dann ist $TT^\dagger - \mathbf{1} \in \mathcal{K}(\h')$ und $T^\dagger T - \mathbf{1} \in \mathcal{K}(\h)$. Aber dann gilt für $(T+K)T^\dagger - \mathbf{1} = TT^\dagger + KT^\dagger - \mathbf{1} \in \mathcal{K}(\h')$ und $T^\dagger (T+K) -\mathbf{1} = T^\dagger T+ T^\dagger K -\mathbf{1}  \in \mathcal{K}(\h)$. Also ist $T^\dagger$ auch Pseudoinverses von $T+K$ und letzterer Operator nach Satz \ref{fredholm}.4 Fredholmsch.
+Sei $T^\dagger$ das Pseudoinverse von $T$. Dann ist $TT^\dagger - \mathbf{1} \in \mathcal{K}(\mathcal{Y})$ und $T^\dagger T - \mathbf{1} \in \mathcal{K}(\h)$. Aber dann gilt für $(T+K)T^\dagger - \mathbf{1} = TT^\dagger + KT^\dagger - \mathbf{1} \in \mathcal{K}(\mathcal{Y})$ und $T^\dagger (T+K) -\mathbf{1} = T^\dagger T+ T^\dagger K -\mathbf{1}  \in \mathcal{K}(\h)$. Also ist $T^\dagger$ auch Pseudoinverses von $T+K$ und letzterer Operator nach Satz \ref{fredholm}.4 Fredholmsch.
 \end{proof}
 
-\begin{example}\noindent
-    \begin{enumerate}
-        \item Sei $\mathbf{1}: \h \to \h$ die Identität auf einem endlichdimensionalen Hilbertraum. Dann ist $\mathbf{1}$ Fredholmsch, denn $\dim(\ker(T)) = 0 < \infty$, $\dim(\ker(T^\ast)) = \dim(\ker(T)) = 0 \leq \infty$ und $\im(T) = \h$ ist abgeschlossen.
-        \item Sei \( T = I + K \), wobei \( I \) die Identität und \( K \) ein kompakter Operator ist. \( T \) ist demnach beschränkt und linear, da \( I \) und \( K \) beschränkte lineare Operatoren sind. Nach Korollar \ref{summeFredholm} ist $T$ Fredholmsch.
-        \item Sei $S: \ell^2(\mathbb{N}) \to \ell^2(\mathbb{N})$ der rechte Shift-Operator, definiert durch $S(x_n) = x_{n+1}$ für $n \geq 2$ und $S(x_n) = 0$ für $n=1$. Dann ist $\ker(S) = \{0\}$ also $\dim(\ker(S)) < \infty$ und $\im(S) = \{ (x_n)_{n \geq 1} \in \ell^2(\mathbb{N}) \; \vert \; x_1 = 0\}$. Somit sehen wir, dass $\h/\im(S) = \langle (\delta_{1n})_{n \geq 1} \rangle_{\mathbb{C}}$ und damit $\dim(\h/\im(S)) = 1 < \infty$ da $\{(\delta_{mn})_{n \geq 1}\}_{m \geq 1}$ eine Othonormalbasis für $\ell^2(\mathbb{N})$ definiert. Sei $(x_n)^{n \geq 1}_k \to (x_n)_{n \geq 1}$ für $k \to \infty$ eine Folge in $\im(S)$. Dann gilt insbesondere
-        \begin{align}
-            \vert \langle (\delta_{1n})_{n \geq 1}, (x_n)_{n \geq 1} \rangle_{\ell^2(\mathbb{N})} - \langle (\delta_{1n})_{n \geq 1}, (x_n)^{n \geq 1}_k \rangle_{\ell^2(\mathbb{N})} \vert = &\vert x_1 - (x_1)_k \vert \nonumber\\
-            \xrightarrow[]{k \to \infty} &\vert x_1 - 0 \vert = 0,
-        \end{align}
-        also ist $(x_n)_{n \geq 1} \in \im(S)$ und das Bild von $S$ somit abgeschlossen.
-        \item Sei \( H = L^2(\mathbb{R}) \) der Hilbertraum der quadratintegrierbaren Funktionen auf \( \mathbb{R} \), und sei \( m(x) \in L^\infty(\mathbb{R}) \) eine beschränkte Funktion, also \( \|m\|_\infty = \sup_{x \in \mathbb{R}} |m(x)| < \infty \). Der Multiplikationsoperator \( M_m \) ist definiert durch \( (M_m f)(x) = m(x) f(x) \) für \( f \in L^2(\mathbb{R}) \). Wir möchten zeigen, dass der Operator \( M_m \) ein Fredholm-Operator ist, wenn \( m(x) \neq 0 \) fast überall. Zunächst betrachten wir den Kern $\ker(M_m) = \{ f \in L^2(\mathbb{R}) \mid m(x) f(x) = 0 \text{ fast überall auf } \mathbb{R} \}$. Da \( m(x) \neq 0 \) fast überall ist, kann \( f(x) \) nur an den Nullstellen von \( m(x) \) von Null verschieden sein. Da diese Nullstellen von Lebesgue-Maß Null sind, muss \( f(x) \) fast überall Null sein, d.h. \( f(x) = 0 \) in \( L^2(\mathbb{R}) \). Somit ist \( \ker(M_m) = \{0\} \), der Kern ist also trivial und hat die Dimension Null. Das Bild ist $\operatorname{Im}(M_m) = \{ g \in L^2(\mathbb{R}) \mid \exists f \in L^2(\mathbb{R}) \text{ mit } g(x) = m(x) f(x) \text{ fast überall} \}.$ Da \( m(x) \neq 0 \) fast überall und \( m(x) \) beschränkt ist, ist der Operator \( M_m \) linear, stetig und invertierbar auf denjenigen Funktionen in \( L^2(\mathbb{R}) \), die fast überall von Null verschieden sind. Da $m(x) \in L^\infty(\mathbb{R})$ und $m(x) \neq 0$ fast überall ist, existiert eine Inverse $M_m^{-1}$ auf dem Bild $\operatorname{Im}(M_m)$. Da $M_m$ beschränkt und invertierbar auf seinem Bild ist, ist nach dem Satz vom stetigen Inversen $\operatorname{Im}(M_m)$ abgeschlossen in $L^2(\mathbb{R})$. Da \( m(x) \neq 0 \) fast überall, gilt \( \operatorname{Im}(M_m) = L^2(\mathbb{R}) \), und der Quotientenraum \( L^2(\mathbb{R}) / \operatorname{Im}(M_m) \) ist trivial, d.h. \( \operatorname{coker}(M_m) = \{0\} \). Also ist $M_m$ Fredholmsch.
-    \end{enumerate}
-\end{example}
 
 \begin{theorem}
     Ein Operator $T \in \mathcal{B}(\h)$ ist Fredholmsch genau dann, wenn das Bild $\pi(T)$ von $T$ in der Calkin-Algebra invertierbar ist.
@@ -333,82 +390,36 @@ Sei $T^\dagger$ das Pseudoinverse von $T$. Dann ist $TT^\dagger - \mathbf{1} \in
 \end{proof}
 
 \begin{remark}
-Für die Definition eines Fredholmoperators reicht es nicht zu fordern, dass die Dimension des Kerns und Kokerns endlich sein soll. Wir können die Bedingung nicht fallen lassen, dass der Operator ein abgeschlossenes Bild haben soll, wie Satz \ref{fredholm}.2 fälschlicherweise suggeriert. Betrachten wir dazu den selbstadjungierten Operator $T: \ell^2(\mathbb{N}) \to \ell^2(\mathbb{N}), T(x_n) \coloneq \sum_{n \geq 1} \frac{1}{n} \langle x_n,e_n \rangle e_n$. wobei $e_n \coloneq (0, \ldots, 1, \ldots)$ mit einer $1$ für das $n$-te Folgeglied. Da $T$ selbstadjungiert ist, gilt $\ker(T) = \ker(T^\ast) = \{0\}$ und $\dim(ker(T)) = \dim(\ker(T^\ast)) < \infty$. 
-
-Wir zeigen, dass $T$ kompakt ist. Betrachte $$\mathbb{B}_{\ell^2(\mathbb{N})} := \left\{ (x_n) \in \ell^2(\mathbb{N}) \; \bigg\vert \; \Vert (x_n) \Vert_2 \coloneq \left(\sum_{n=1}^{\infty} \vert x_n \vert^2\right)^{\frac{1}{2}} \leq 1 \right\},$$ die Einheitskugel in $\ell^2(\mathbb{N})$. Dann ist für $(x_n)_{n \geq 1} \in \mathbb{B}_{\ell^2(\mathbb{N})}$ die Norm der Folge $\Vert T(x_n) \Vert_2 = (\sum_{n=1}^\infty \frac{1}{n^2} \vert x_n \vert^2)^\frac{1}{2} \leq (\sum_{n=1}^\infty \vert x_n \vert^2)^\frac{1}{2} \leq 1 < \infty$ beschränkt. Also ist das Bild präkompakt und $T$ somit kompakt. Die Folge $(y_n)_{n \geq 1} = T(\delta_{mn})_{n \geq 1} = (\frac{1}{n}\delta_{mn})_{n \geq 1} \in \im(T)$ hat Norm $\Vert (y_n)_{n \geq 1} \Vert_2 = \frac{1}{m} \xrightarrow[]{m \to \infty} 0$, aber $(0)_{n \geq 1} \notin \im(T)$. Also kann $T$ nicht abgeschlossen sein, da wir eine Bildfolge gefunden haben, die gegen den Nullvektor in $\ell^2$-Norm konvergiert.
+Für die Definition eines Fredholmoperators reicht es nicht zu fordern, dass die Dimension des Kerns und Kokerns endlich sein soll. Wir können die Bedingung nicht fallen lassen, dass der Operator ein abgeschlossenes Bild haben soll, wie Satz \ref{fredholm}.2 fälschlicherweise suggeriert. Betrachten wir dazu den selbstadjungierten Operator $T: \ell^2(\mathbb{N}) \to \ell^2(\mathbb{N}), Tx \coloneq \frac{1}{n} (x_n)_{n \geq 1}$. Da $T$ selbstadjungiert ist, gilt $\ker(T) = \ker(T^\ast) = \{0\}$ und $\dim(ker(T)) = \dim(\ker(T^\ast)) < \infty$. Wir zeigen, dass $T$ kompakt ist. Betrachte $$\mathbb{B}_{\ell^2(\mathbb{N})} := \left\{ x \in \ell^2(\mathbb{N}) \; \bigg\vert \; \Vert x \Vert_2 \coloneq \left(\sum_{n=1}^{\infty} \vert x_n \vert^2\right)^{\frac{1}{2}} \leq 1 \right\},$$ die Einheitskugel in $\ell^2(\mathbb{N})$. Dann ist für $x \in \mathbb{B}_{\ell^2(\mathbb{N})}$ die Norm $\Vert Tx \Vert_2 = (\sum_{n=1}^\infty \frac{1}{n^2} \vert x_n \vert^2)^\frac{1}{2} \leq (\sum_{n=1}^\infty \vert x_n \vert^2)^\frac{1}{2} \leq 1 < \infty$ beschränkt. Also ist das Bild präkompakt und $T$ somit kompakt. Betrachte die Folge $y = (\frac{1}{n})_{n \geq 1}$. Angenommen es gäbe ein $x \in \ell^2(\mathbb{N})$, so dass $Tx = y$, dann müsste gelten $\frac{1}{n} x_n = \frac{1}{n}$, also $x_n = 1$ für alle $n \geq 1$. Dies führt zu $\Vert x \Vert_2 = \left( \sum_{n=1}^{\infty} 1 \right)^\frac{1}{2} = \infty$, also wäre $x \notin \ell^2(\mathbb{N})$ und damit ist $y \notin \im(T)$. Betrachte die Folge $\widetilde{y} := \frac{1}{n} x_n$, wobei \( x_n = \chi_{\{1, \ldots, n\}}(\{n\})\). Dann ist $x \in \ell^2(\mathbb{N})$ da \( \Vert x \Vert^2 = \sum_{n \geq 1} \vert x_n \vert^2 = \sum_{n=1}^{N} \vert x_n \vert^2 < \infty\) für alle \( N \in \mathbb{N} \). Insbesondere $\widetilde{y} \in \im(T)$. Außerdem gilt $\Vert y - \widetilde{y} \Vert_2 \xrightarrow[]{n \to \infty} 0$ also $\widetilde{y} \to y$. Also ist $\im(T)$ nicht abgeschlossen.
 \end{remark}
 
 Wir führen nun ein erstes Kriterium ein, mit dem wir entscheiden können, ob ein gegebener Operator Fredholmsch ist oder nicht. Es gibt insgesamt zwei weit verbreitete Kriterien um dies zu prüfen, das zweite Kriterium ist in \cite[Theorem 3.4.1]{doll2023spectral} nachzulesen.
 
 \begin{proposition}
-    Sei $T \in \mathcal{B}(\h,\h')$ ein beschränkter linearer Operator. Falls es kompakte lineare Operatoren $K \in \mathcal{K}(\h,\h'')$ gibt und eine Konstante $c > 0$, wobei $\h''$ ein weiterer separabler Hilbertraum ist, so dass die folgende Bedingung
+    Sei $T \in \mathcal{B}(\h,\mathcal{Y})$ ein beschränkter linearer Operator. Falls es kompakte lineare Operatoren $K \in \mathcal{K}(\h,\mathcal{Z})$ gibt und eine Konstante $c > 0$, wobei $\mathcal{Z}$ ein weiterer separabler Hilbertraum ist, so dass die folgende Bedingung
     \begin{align}
-        \Vert\phi\Vert_\h \leq c (\Vert T\phi \Vert_{\h'} + \Vert K\phi \Vert_{\h''})
+        \Vert\phi\Vert_\h \leq c (\Vert T\phi \Vert_{\mathcal{Y}} + \Vert K\phi \Vert_{\mathcal{Z}})
     \end{align}
     für alle $\phi \in \h$ erfüllt ist, dann ist $\im(T)$ abgeschlossen und $T$ hat endlichdimensionalen Kern.
 \end{proposition}
 
 \begin{proof}
-    Sei $(\phi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$, sodass $T \phi_n$ konvergent ist in $\h'$, es soll also ein $\psi \in \h'$ geben, mit $\lim_{n\to\infty} T\phi_n = \psi$. Weil $K$ kompakt ist, gibt es eine Teilfolge $(\phi_{n_k})_{k \geq 1}$, so dass $K \phi_{n_k}$ konvergent ist. Dann ist $(K\phi_{n_k})_{k \geq 1}$ eine Cauchy-Folge und $\lim_{k\to\infty} T\phi_{n_k} = \psi$, also ist auch $(T\phi_{n_k})_{k \geq 1}$ eine Cauchy-Folge. Deshalb gibt es für alle $\epsilon > 0$ ein $N\in \mathbb{N}$, so dass
+    Sei $(\phi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$, sodass $T \phi_n$ konvergent ist in $\mathcal{Y}$, es soll also ein $\psi \in \mathcal{Y}$ geben, mit $\lim_{n\to\infty} T\phi_n = \psi$. Weil $K$ kompakt ist, gibt es eine Teilfolge $(\phi_{n_k})_{k \geq 1}$, so dass $K \phi_{n_k}$ konvergent ist. Dann ist $(K\phi_{n_k})_{k \geq 1}$ eine Cauchy-Folge und $\lim_{k\to\infty} T\phi_{n_k} = \psi$, also ist auch $(T\phi_{n_k})_{k \geq 1}$ eine Cauchy-Folge. Deshalb gibt es für alle $\epsilon > 0$ ein $N\in \mathbb{N}$, so dass
     \begin{align}
-        \max(\Vert T\phi_{n_k}-T\phi_{n_m} \Vert_{\h'}, \Vert K\phi_{n_k}-K\phi_{n_m} \Vert_{\h''}) < \frac{\epsilon}{2c}
+        \max(\Vert T\phi_{n_k}-T\phi_{n_m} \Vert_{\mathcal{Y}}, \Vert K\phi_{n_k}-K\phi_{n_m} \Vert_{\mathcal{Z}}) < \frac{\epsilon}{2c}
     \end{align}
     für alle $k,m > N$. Daraus folgt
     \begin{align}
-        \Vert \phi_{n_k} - \phi_{n_m} \Vert_\h \leq c (\Vert T\phi_{n_k}-T\phi_{n_m} \Vert_{\h'} +  \Vert K\phi_{n_k}-K\phi_{n_m} \Vert_{\h''}) < \epsilon
+        \Vert \phi_{n_k} - \phi_{n_m} \Vert_\h \leq c (\Vert T\phi_{n_k}-T\phi_{n_m} \Vert_{\mathcal{Y}} +  \Vert K\phi_{n_k}-K\phi_{n_m} \Vert_{\mathcal{Z}}) < \epsilon
     \end{align}
     für alle $k,m > N$. Also ist $(\phi_{n_k})_{k \geq 1}$ eine Cauchy-Folge in einem Hilbertraum und somit konvergent.
 
     Wir nehmen an, dass $\dim(\ker(T))$ unendlichdimensional ist und $\{\phi_n \;\vert\; n \geq 1\}$ eine Orthonormalbasis des Kerns von $T$ ist. Dann ist $(\phi_n)_{n \geq 1}$ eine beschränkte Folge in $\h$, so dass $T \phi_n$ konstant $0$ ist und damit ebenfalls konvergent. Dies ist ein Widerspruch, da $(\phi_n)_{k \geq 1}$ keine konvergente Teilfolge besitzt. Also ist $\dim(\ker(T)) < \infty$.
 
-    Ferner gibt es eine Konstante $c_1 > 0$, so dass $\Vert \psi \Vert_\h \leq c_1 \Vert T\psi \Vert_{\h'}$ für alle $\psi \in \ker(T)^\perp$, denn sonst gäbe es eine Folge $(\psi_n)_{k \geq 1}$ in $\ker(T)^\perp$ mit $\Vert \psi_n \Vert_\h = 1$ für alle $n \geq 1$ und $\Vert T\psi_n \Vert_{\h'} \leq \frac{1}{n}$ für alle $n \geq 1$. Da $(T\psi_n)_\on$ konvergent ist, gibt es nach obigem Argument nach Übergang zu einer Teilfolge einen Grenzwert zu ebd. Teilfolge $\psi \in \ker(T)^\perp$ mit $\Vert \psi \Vert_\h = 1$. Dies ist ein Widerspruch, da $T \psi = \lim_{k\to\infty} T \psi_{n_k} = 0$.
+    Ferner gibt es eine Konstante $c_1 > 0$, so dass $\Vert \psi \Vert_\h \leq c_1 \Vert T\psi \Vert_{\mathcal{Y}}$ für alle $\psi \in \ker(T)^\perp$, denn sonst gäbe es eine Folge $(\psi_n)_{k \geq 1}$ in $\ker(T)^\perp$ mit $\Vert \psi_n \Vert_\h = 1$ für alle $n \geq 1$ und $\Vert T\psi_n \Vert_{\mathcal{Y}} \leq \frac{1}{n}$ für alle $n \geq 1$. Da $(T\psi_n)_\on$ konvergent ist, gibt es nach obigem Argument nach Übergang zu einer Teilfolge einen Grenzwert zu ebd. Teilfolge $\psi \in \ker(T)^\perp$ mit $\Vert \psi \Vert_\h = 1$. Dies ist ein Widerspruch, da $T \psi = \lim_{k\to\infty} T \psi_{n_k} = 0$.
 
-    Zuletzt sei $(\theta_n)_{n \geq 1}$ eine Folge in $\im(T)$, die zu einem $\theta \in \h'$ konvergiert. Dann gibt es ein $\phi_n \in \ker(T)^\perp$ mit $T\phi_n = \theta_n$. Nach dem vorherigen Argument erhalten wir $\Vert\phi_n-\phi_m\Vert_\h \leq c_1 \Vert \theta_n - \theta_m \Vert_\h$, und somit ist $(\phi_n)_{n\geq 1}$ eine Cauchy-Folge und kovergiert zu einem $\phi$. Folglich ist $T\phi = \theta$ und $\theta \in \im(T)$. Also ist $\im(T)$ abgeschlossen.
+    Zuletzt sei $(\theta_n)_{n \geq 1}$ eine Folge in $\im(T)$, die zu einem $\theta \in \mathcal{Y}$ konvergiert. Dann gibt es ein $\phi_n \in \ker(T)^\perp$ mit $T\phi_n = \theta_n$. Nach dem vorherigen Argument erhalten wir $\Vert\phi_n-\phi_m\Vert_\h \leq c_1 \Vert \theta_n - \theta_m \Vert_\h$, und somit ist $(\phi_n)_{n\geq 1}$ eine Cauchy-Folge und kovergiert zu einem $\phi$. Folglich ist $T\phi = \theta$ und $\theta \in \im(T)$. Also ist $\im(T)$ abgeschlossen.
 \end{proof}
-
-\section{Der Index eines Fremdholmoperators}
-Ein Fredholm-Operator ist ein beschränkter linearer Operator \( T \) zwischen Banachräumen \( X \) und \( Y \), der eine fundamentale Rolle in der Theorie der linearen Operatoren spielt. Die wesentliche Eigenschaft eines Fredholm-Operators ist, dass er „fast invertierbar“ ist, was bedeutet, dass er sich wie ein Operator verhält, der bis auf endliche Störungen invertierbar ist. Konkret verlangt man von einem Fredholm-Operator, dass sowohl der Kern als auch der Kokern endlich-dimensional sind. Der Kern eines Operators \( T \), geschrieben als \( \ker(T) = \{ x \in X \mid T(x) = 0 \} \), ist der Raum der Elemente, die auf Null abgebildet werden. Dass der Kern endlich-dimensional ist, bedeutet, dass die Anzahl linear unabhängiger Elemente in \( \ker(T) \) endlich ist. Der Kokern ist definiert als der Quotientenraum \( Y / \operatorname{Im}(T) \), also der Raum der Elemente, die nicht im Bild des Operators liegen. Wenn dieser Raum endlich-dimensional ist, bedeutet das, dass der Operator „nahe“ an einem surjektiven Operator liegt, dessen Bild den gesamten Raum \( Y \) abdeckt. Der Index eines Fredholm-Operators ist eine sehr wichtige Zahl, die seine algebraischen Eigenschaften beschreibt. Er ist definiert als die Differenz zwischen der Dimension des Kerns und der Dimension des Kokerns:
-\[
-\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\operatorname{coker}(T)).
-\]
-Dieser Index ist eine ganze Zahl, und was ihn besonders macht, ist seine Stabilität unter kompakten Störungen. Das bedeutet, dass der Index eines Fredholm-Operators unverändert bleibt, wenn man den Operator um einen kompakten Operator ergänzt, was eine zentrale Eigenschaft in vielen Anwendungen der Theorie der Fredholm-Operatoren ist, wie etwa in der Theorie der elliptischen Differentialoperatoren. Diese Stabilität ist besonders nützlich in Situationen, in denen man die invertierbaren Eigenschaften eines Operators durch kleine oder endliche Störungen nicht verlieren möchte. Der Index eines Fredholm-Operators fasst also die Abweichung von der Invertierbarkeit zusammen. Ein Fredholm-Operator mit Index Null ist fast invertierbar, während ein Operator mit nichttrivialem Index eine gewisse Abweichung davon aufweist, die jedoch kontrollierbar ist, da der Kern und der Kokern endlich-dimensional sind.
-
-\begin{definition}
-    Der Index eines Fredholmoperators $T \in \mathcal{FB}(\h,\h')$ ist
-    \begin{align}
-        \ind(T) &= \dim(\ker(T)) - \dim(\ker(T^\ast)) \nonumber\\
-                &= \dim(\ker(T)) - \dim(\coker(T))
-    \end{align}
-    Da $\ker(T^\ast) = \im(T)^\perp$ und $\im(T)$ abgeschlossen ist für einen Fredholmoperator, können wir den Index auch umschreiben als
-    \begin{equation}
-        \ind(T) = \dim(\ker(T)) - \dim(\h'/\im(T)).
-    \end{equation}
-\end{definition}
-
-Als Konsequenz dieser Definition und dem Satz \ref{fredholm} ergibt sich folgendes Korollar:
-
-\begin{corollary}\noindent
-    \begin{enumerate}
-        \item Für $T \in \mathcal{FB}(\h,\h')$, $T' \in \mathcal{FB}(\h'',\h)$, ist auch $TT'\in \mathcal{FB}(\h'',\h')$.
-        \item Falls $T \in \mathcal{FB}(\h,\h')$, dann ist $T^\ast \in \mathcal{FB}(\h',\h)$ und $\ind(T^\ast) = - \ind(T)$.
-        \item Falls $A \in \mathcal{B}(\h,\h')$ invertierbar ist, dann ist $A \in \mathcal{FB}(\h,\h')$ und $\ind(A) = 0$.
-        \item Für $T \in \mathcal{FB}(\h,\h')$ und invertierbare Operatoren $A \in \mathcal{B}(\h',\h'')$ und $B \in \mathcal{B}(\h'',\h)$, erhalten wir für die Indizes $\ind(AT) = \ind(TB) = \ind(T)$.
-        \item Für $T \in \mathcal{FB}(\h,\h')$ gilt
-        \begin{equation}
-            \ind(T) = \dim(\ker(T^\ast T)) - \dim(\ker(TT^\ast)).
-        \end{equation}
-        \item Für $T \in \mathcal{FB}(\h,\h')$ und $T' \in \mathcal{FB}(\h'',\h''')$ erhalten wir $T \oplus T' \in \mathcal{FB}(\h \oplus \h'', \h' \oplus \h''')$ und $\ind(T \oplus T') = \ind(T) + \ind(T')$. 
-    \end{enumerate}
-\end{corollary}
-
-\begin{example}\noindent
-    \begin{enumerate}
-        \item Sei $\mathbf{1}: \h \to \h$ die Identität auf einem endlichdimensionalen Hilbertraum. Dann ist $\mathbf{1}$ ein Fredholm-Operator. Da $\ker(\mathbf{1}) = \{0\}$, haben wir $\dim(\ker(\mathbf{1})) = 0$. Das Bild ist $\im(\mathbf{1}) = \h$, was ebenfalls den gesamten Raum abdeckt, also ist der Kokern trivial, d.h. $\dim(\operatorname{coker}(\mathbf{1})) = 0$. Somit ist der Index $\operatorname{ind}(\mathbf{1}) = \dim(\ker(\mathbf{1})) - \dim(\operatorname{coker}(\mathbf{1})) = 0 - 0 = 0$.
-        \item Sei \( T = I + K \), wobei \( I \) die Identität und \( K \) ein kompakter Operator ist. \( T \) ist beschränkt und linear, da \( I \) und \( K \) beschränkte lineare Operatoren sind. Da \( K \) kompakt ist und \( I \) Fredholm ist, bleibt \( T \) nach dem Satz über kompakte Störungen \ref{summeFredholm} ebenfalls ein Fredholm-Operator. Es gilt $\operatorname{ind}(T) = \dim(\ker(T)) - \dim(\coker(T)) = 0 - 0 = \operatorname{ind}(I)$.
-        \item Sei \( S: \ell^2(\mathbb{N}) \to \ell^2(\mathbb{N}) \) der rechte Shift-Operator, definiert durch \( S(x_n) = x_{n+1} \) für $n \geq 2$ und $S(x_1) = 0$. Der Kern von \( S \) ist trivial, da \( S(x_n) = 0 \) bedeutet, dass \( x_n = 0 \) für alle \( n \), also \( \dim(\ker(S)) = 0 \). Das Bild von \( S \) ist die Menge aller Folgen \( (x_n)_{n \geq 1} \in \ell^2(\mathbb{N}) \), für die \( x_1 = 0 \), d.h. \( \im(S) = \{ (x_n)_{n \geq 1} \mid x_1 = 0 \} \). Der Kokern \( \ell^2(\mathbb{N}) / \im(S) \) ist eindimensional, da die Folge \( (1, 0, 0, \dots) \) eine Basis dieses Raums bildet. Somit haben wir $\dim(\operatorname{coker}(S)) = 1$. Der Index von \( S \) ist somit $\operatorname{ind}(S) = \dim(\ker(S)) - \dim(\operatorname{coker}(S)) = 0 - 1 = -1.$
-        \item Sei \( H = L^2(\mathbb{R}) \) der Hilbertraum der quadratintegrierbaren Funktionen auf \( \mathbb{R} \), und sei \( m(x) \in L^\infty(\mathbb{R}) \) eine beschränkte Funktion. Der Multiplikationsoperator \( M_m \) ist definiert durch \( (M_m f)(x) = m(x) f(x) \).  Zunächst betrachten wir den Kern \( \ker(M_m) = \{ f \in L^2(\mathbb{R}) \mid m(x) f(x) = 0 \text{ fast überall auf } \mathbb{R} \} \). Da \( m(x) \neq 0 \) fast überall, ist der Kern trivial, d.h. \( \ker(M_m) = \{0\} \), also \( \dim(\ker(M_m)) = 0 \). Das Bild \( \operatorname{Im}(M_m) \) ist der Raum aller Funktionen \( g(x) \in L^2(\mathbb{R}) \), die durch \( g(x) = m(x) f(x) \) für ein \( f(x) \in L^2(\mathbb{R}) \) dargestellt werden können. Da \( m(x) \neq 0 \) fast überall, ist \( \operatorname{Im}(M_m) = L^2(\mathbb{R}) \), also ist der Kokern \( \operatorname{coker}(M_m) = \{0\} \). Somit haben wir $\dim(\operatorname{coker}(M_m)) = 0$. Der Index von \( M_m \) ist daher $\operatorname{ind}(M_m) = \dim(\ker(M_m)) - \dim(\operatorname{coker}(M_m)) = 0 - 0 = 0.$
-        \end{enumerate}
-\end{example}
 
 \singlespacing
 \nocite{*}
