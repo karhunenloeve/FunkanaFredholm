@@ -432,6 +432,41 @@ Wir führen nun ein erstes Kriterium ein, mit dem wir entscheiden können, ob ei
     Zuletzt sei $(\theta_n)_{n \geq 1}$ eine Folge in $\im(T)$, die zu einem $\theta \in \mathcal{Y}$ konvergiert. Dann gibt es ein $\phi_n \in \ker(T)^\perp$ mit $T\phi_n = \theta_n$. Nach dem vorherigen Argument erhalten wir $\Vert\phi_n-\phi_m\Vert_\h \leq c_1 \Vert \theta_n - \theta_m \Vert_\h$, und somit ist $(\phi_n)_{n\geq 1}$ eine Cauchy-Folge und kovergiert zu einem $\phi$. Folglich ist $T\phi = \theta$ und $\theta \in \im(T)$. Also ist $\im(T)$ abgeschlossen.
 \end{proof}
 
+\section{Beispiel eines Toeplitzoperators}
+Wir betrachten den Hardy-Raum \( H^2(\mathbb{T}) \), welcher ein Hilbertraum ist, auf dem Einheitskreis \( \mathbb{T} \subset \mathbb{C} \), der aus den Funktionen \( g \in L^2(\mathbb{T}) \) besteht, deren negative Fourier-Koeffizienten verschwinden. Genauer gesagt ist
+\[
+H^2(\mathbb{T}) = \left\{ g \in L^2(\mathbb{T}) \ \bigg|\ g(z) = \sum_{k=0}^\infty \hat{g}(k) z^k, \quad z \in \mathbb{T} \right\},
+\]
+wobei \( \hat{g}(k) \) der \( k \)-te Fourier-Koeffizient von \( g \) ist. Die orthogonale Projektion von \( L^2(\mathbb{T}) \) auf \( H^2(\mathbb{T}) \) bezeichnen wir mit \( P \). Wir definieren den Toeplitz-Operator \( T_{f_m} \) auf \( H^2(\mathbb{T}) \) als \( f_m(z) = z^m \), wobei \( m \in \mathbb{Z} \). Der Operator \( T_{f_m} \) wirkt auf \( g \in H^2(\mathbb{T}) \) durch $T_{f_m}(g) = P(f_m \cdot g) = P(z^m g)$. Das heißt, wir multiplizieren \( g \) mit \( z^m \) und projizieren das Ergebnis auf \( H^2(\mathbb{T}) \), indem wir die negativen Fourier-Koeffizienten entfernen. Da \( f_m(z) = z^m \) keine Nullstellen auf dem Einheitskreis \( \mathbb{T} \) besitzt (weil \( |z| = 1 \) und \( z^m \neq 0 \) für alle \( z \in \mathbb{T} \)), ist \( f_m \) invertierbar auf \( \mathbb{T} \). Somit gehört \( f_m \) zu \( C(\mathbb{T}) \setminus \{0\} \), den stetigen Funktionen ohne Nullstellen auf \( \mathbb{T} \). \( T_{f_m} \) ist also ein Fredholm-Operator.
+
+\subsection{Kern von \( T_{f_m} \)}
+Sei \( g \in \ker(T_{f_m}) \), dann gilt $T_{f_m}(g) = P(z^m g) = 0$. Das bedeutet, dass \( z^m g \in H^2_-(\mathbb{T}) \), wobei \( H^2_-(\mathbb{T}) \) der orthogonale Komplement von \( H^2(\mathbb{T}) \) in \( L^2(\mathbb{T}) \) ist und aus Funktionen mit ausschließlich negativen Fourier-Koeffizienten besteht:
+\[
+H^2_-(\mathbb{T}) = \left\{ h \in L^2(\mathbb{T}) \ \bigg|\ h(z) = \sum_{k=-\infty}^{-1} \hat{h}(k) z^k \right\}.
+\]
+Da \( g \in H^2(\mathbb{T}) \) nur nichtnegative Fourier-Koeffizienten hat, führt die Multiplikation mit \( z^m \) (eine Verschiebung der Koeffizienten um \( m \)) dazu, dass \( z^m g \) nur negative Koeffizienten hat, wenn \( g = 0 \) ist. Folglich ist der Kern trivial $\ker(T_{f_m}) = \{0\}$, also \( \dim(\ker(T_{f_m})) = 0 \).
+
+\subsection{Kokern von \( T_{f_m} \)}
+Der Kokern ist der Quotient $\operatorname{Koker}(T_{f_m}) = H^2(\mathbb{T}) / \operatorname{im}(T_{f_m})$. Um seine Dimension zu bestimmen, betrachten wir den adjungierten Operator \( T_{f_m}^* \). Für Toeplitz-Operatoren gilt \( T_{f_m}^* = T_{\overline{f_m}} \), also $T_{f_m}^* = T_{\overline{z^m}} = T_{z^{-m}}$. Es gilt $(T_{f_m}) \cong \ker(T_{f_m}^*)$. Sei \( h \in \ker(T_{f_m}^*) \), dann ist $T_{z^{-m}}(h) = P(z^{-m} h) = 0$. Das bedeutet, dass \( z^{-m} h \in H^2_-(\mathbb{T}) \). Da \( h \in H^2(\mathbb{T}) \), hat \( h \) eine Fourier-Reihe mit Koeffizienten \( \hat{h}(k) \) für \( k \geq 0 \). Die Multiplikation mit \( z^{-m} \) verschiebt diese Koeffizienten um \( -m \), sodass die nichtverschwindenden Koeffizienten nur für \( k = 0, 1, \ldots, m - 1 \) auftreten. Also ist $\dim(\ker(T_{f_m}^*)) = m \quad \text{für } m > 0$. Folglich ist $\dim(\operatorname{Koker}(T_{f_m})) = m$.
+
+\subsection{Abgeschlossenheit des Bildes}
+Da \( T_{f_m} \) ein beschränkter linearer Operator zwischen Hilberträumen mit endlichdimensionalem Kern und Kokern ist, und weil \( f_m \) keine Nullstellen auf \( \mathbb{T} \) hat, ist das Bild von \( T_{f_m} \) abgeschlossen.
+
+\subsection{Der Index von \( T_{f_m} \)}
+Der Index eines Fredholm-Operators ist definiert als $\operatorname{Index}(T_{f_m}) = \dim(\ker(T_{f_m})) - \dim(\operatorname{Koker}(T_{f_m})) = 0 - m = -m$. Die Windungszahl \( \operatorname{wind}(f_m) \) von \( f_m \) ist die Anzahl der Umläufe, die \( f_m(z) \) um den Ursprung macht, wenn \( z \) einmal den Einheitskreis \( \mathbb{T} \) durchläuft. Formal definiert ist sie durch
+\begin{align}
+    \operatorname{wind}(f_m) = \frac{1}{2\pi i} \int_{\mathbb{T}} \frac{f_m'(z)}{f_m(z)} \, dz.
+\end{align}
+Für \( f_m(z) = z^m \) erhalten wir
+\begin{align}
+    \frac{f_m'(z)}{f_m(z)} = \frac{m z^{m-1}}{z^m} = \frac{m}{z},
+\end{align}
+also
+\begin{align}
+\operatorname{wind}(f_m) = \frac{1}{2\pi i} \int_{\mathbb{T}} \frac{m}{z} \, dz = \frac{m}{2\pi i} \int_{\mathbb{T}} \frac{1}{z} \, dz = m.
+\end{align}
+Der Wegintegral \(\int_{\mathbb{T}} \frac{1}{z} \, dz\) über den Einheitskreis ergibt \( 2\pi i \). Es gilt der Zusammenhang $\operatorname{Index}(T_{f_m}) = -\operatorname{wind}(f_m)$.
+
 \singlespacing
 \nocite{*}
 \bibliographystyle{plain}
