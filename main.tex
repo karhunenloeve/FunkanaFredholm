@@ -353,6 +353,28 @@ Als Konsequenzen ergeben sich folgende beiden Korollare:
         \end{align}
         Diese Gleichheit ergibt sich aus $\Vert T\varphi \Vert^2 = \langle T\varphi, T\varphi \rangle_\h = \langle \varphi, T^\ast T\varphi \rangle_\h = 0$, dann ist $\varphi \in \ker(T)$ aufgrund der Norm.
         \item Für $T \in \mathcal{FB}(\h,\mathcal{Y})$ und $T' \in \mathcal{FB}(\mathcal{Z},\mathcal{Z}')$ erhalten wir $T \oplus T' \in \mathcal{FB}(\h \oplus \mathcal{Z}, \mathcal{Y} \oplus \mathcal{Z}')$ und $\ind(T \oplus T') = \ind(T) + \ind(T')$.
+        \item Wir wollen zeigen, dass für zwei Fredholm-Operatoren \( T: \h \to \mathcal{Y} \) und \( S: \mathcal{Y} \to \mathcal{Z} \) der zusammengesetzte Operator \( S T \) ebenfalls Fredholm ist und der Index additiv ist: $\operatorname{ind}(S T) = \operatorname{ind}(S) + \operatorname{ind}(T)$. Es gilt für den Kern
+   \begin{align}
+     \ker(S T) = \{ x \in X \mid S T x = 0 \} = T^{-1}(\ker(S)).
+   \end{align}
+     Da \( \ker(S)\) endlich-dimensional ist (weil \( S \) Fredholm ist) und \( T \) ein beschränkter Operator ist, ist \( T^{-1}(\ker(S)) \) ein endlich-dimensionaler Vektorraum. Es gilt die exakte Sequenz:
+   \begin{align}
+     0 \to \ker(T) \to \ker(S T) \to \ker(S) \to 0.
+   \end{align}
+     Daraus folgt $\dim(\ker(S T)) = \dim(\ker T) + \dim(\ker(S))$. Betrachte das Bild \( \operatorname{im}(S T) = S(\operatorname{im} T) \). Da \( \operatorname{im} T \) ein abgeschlossener Unterraum von \( \mathcal{Y} \) ist (weil \( T \) Fredholm ist) und \( S \) ein Fredholm-Operator ist, ist das Bild \( \operatorname{im}(S T) \) ein abgeschlossener Unterraum von \( \mathcal{Z} \). Zudem haben wir die exakte Sequenz:
+   \begin{align}
+     0 \to \operatorname{im}(T) \xrightarrow{S} \operatorname{im}(S T) \to \operatorname{coker}(S) \to 0.
+   \end{align}
+     Daraus folgt, dass das Kokern von \( S T \) endlich-dimensional ist und:
+   \begin{align}
+     \dim(\operatorname{coker}(S T)) = \dim(\operatorname{coker}(T)) + \dim(\operatorname{coker}(S)).
+   \end{align}
+   \begin{align}
+   \operatorname{ind}(S T) &= \dim(\ker(S T)) - \dim(\operatorname{coker}(S T)) \nonumber\\
+   &= [\dim(\ker T) + \dim(\ker(S))] - [\dim(\operatorname{coker}(T)) + \dim(\operatorname{coker}(S))] \nonumber\\
+   &= [\dim(\ker T) - \dim(\operatorname{coker}(T))] + [\dim(\ker(S)) - \dim(\operatorname{coker}(S))] \nonumber\\
+   &= \operatorname{Index}(T) + \operatorname{Index}(S).
+   \end{align}
     \end{enumerate}
 \end{corollary}
 
